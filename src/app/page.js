@@ -1,3 +1,4 @@
+import Banner1 from '@/Components/Banner'
 import Hero from '@/sections/Hero'
 import Products from '@/sections/Products'
 import React from 'react'
@@ -7,6 +8,7 @@ const Home = () => {
     <>
     <Hero/>
     <Products/>
+    <Banner1/>
     </>
   )
 }
