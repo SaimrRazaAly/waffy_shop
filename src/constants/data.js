@@ -22,8 +22,79 @@ export const products = [
 ];
 
 export const Team_data = [
-  { id: 1, title: "ali", profession:"Develper", image: "/images/1Client.jpg" },
-  { id: 2, title: "H2", profession:"Develper", image: "/images/1Client.jpg" },
-  { id: 3, title: "asdjflkasf", profession:"Develper", image: "/images/1Client.jpg" },
-  { id: 4, title: "Bad Seeds", profession:"Develper", image: "/images/1Client.jpg" },
+  { id: 1, title: "ali", profession: "Develper", image: "/images/1Client.jpg" },
+  { id: 2, title: "H2", profession: "Develper", image: "/images/1Client.jpg" },
+  {
+    id: 3,
+    title: "asdjflkasf",
+    profession: "Develper",
+    image: "/images/1Client.jpg",
+  },
+  {
+    id: 4,
+    title: "Bad Seeds",
+    profession: "Develper",
+    image: "/images/1Client.jpg",
+  },
+];
+
+export const Services_data = [
+  {
+    id: 1,
+    title: "Dried Seeds",
+    description:
+      "Korem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+    image: "/images/5.jpg",
+  },
+  {
+    id: 2,
+    title: "Good Seeds",
+    description:
+      "Korem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+    image: "/images/5.jpg",
+  },
+  {
+    id: 3,
+    title: "Bad Seeds",
+    description:
+      "Korem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+    image: "/images/5.jpg",
+  },
+  {
+    id: 4,
+    title: "Bad Seeds",
+    description:
+      "Korem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+    image: "/images/5.jpg",
+  },
+];
+export const Premium_Products_data = [
+  {
+    id: 1,
+    title: "Dried Seeds",
+    description:
+      "Korem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+    image: "/images/5.jpg",
+  },
+  {
+    id: 2,
+    title: "Good Seeds",
+    description:
+      "Korem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+    image: "/images/5.jpg",
+  },
+  {
+    id: 3,
+    title: "Bad Seeds",
+    description:
+      "Korem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+    image: "/images/5.jpg",
+  },
+  {
+    id: 4,
+    title: "Bad Seeds",
+    description:
+      "Korem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+    image: "/images/5.jpg",
+  },
 ];
