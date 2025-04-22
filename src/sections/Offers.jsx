@@ -4,11 +4,12 @@ import Image from "next/image";
 import React from "react";
 import { OverLay } from "@/Components/Offer_Box";
 
-const Offers = () => {
+const Offers = ({row}) => {
   return (
-    <div className=" mx-auto py-5  flex flex-col lg:flex-row gap-5 justify-center  items-center px-2 bg-slate-300">
+    <div className={`mx-auto py-5 flex flex-col ${row === "row-reverse" ? "xl:flex-row-reverse" : "xl:flex-row"} gap-5 justify-center items-center px-2`}>
+
       <div className="">
-        <div className=" md:w-[720px] lg:w-[400px] w-[350px] lg:h-[660px] h-[250px] mt-10 overflow-hidden relative group">
+        <div className=" md:w-[740px] xl:w-[400px] w-[350px] xl:h-[660px] h-[250px] mt-10 overflow-hidden relative group">
           <Image
             src={images.Image2}
             alt="Foods"
@@ -23,7 +24,8 @@ const Offers = () => {
           <OverLay
             title={"The Flavors of Spices"}
             para={"50% FLAT OFFER ALL PRODUCTS"}
-            classes={"lg:!bottom-[50%] lg:left-[10%] "}
+            row={row}
+            classes={`xl:right-[10%] xl:left-[2%] xl:!top[2%]-  xl:bottom-[50%] `}
           />
         </div>
       </div>
