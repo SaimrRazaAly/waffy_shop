@@ -1,12 +1,11 @@
 import { Blog_Post_Card } from "@/Components/Cards";
 import Sec_Heading from "@/Components/Sec_Heading";
 import { Blog_Post_data } from "@/constants/data";
-import Image from "next/image";
 import React from "react";
 
 const Blog_Post = () => {
   return (
-    <section>
+    <section className="my-10">
       <Sec_Heading
         title={"Blog Post"}
         para={"Suspendisse potenti nullam ac tortor vitae purus faucibus orn."}

@@ -1,3 +1,8 @@
 @import "tailwindcss";
 
 
+@layer components {
+.before_Image {
+    @apply before:content-[''] before:absolute before:bg-[url('/images/2.jpg')] before:bg-cover before:w-full before:h-full before:bg-center before:brightness-50 before:-z-10 
+}
+}

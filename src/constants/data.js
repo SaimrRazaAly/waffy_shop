@@ -106,7 +106,7 @@ export const Blog_Post_data = [
     comments: 5,
     description:
       "Korem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
-    image:"/images/1.jpg",
+    image: "/images/1.jpg",
   },
   {
     id: 2,
@@ -118,4 +118,46 @@ export const Blog_Post_data = [
       "Sit amet dolor consecteur adipisicing elitsed do eiusmod tempor incididunt ulabore et dolore ulabore et dolore.",
     image: "/images/1.jpg",
   },
+];
+export const Items_data = [
+  {
+    id: 1,
+    title: "Dried Seeds",
+    description: "Fenugreek",
+    image: "/images/1.jpg",
+  },
+  {
+    id: 2,
+    title: "Dried Seeds",
+    description: "Fenugreek",
+    image: "/images/2.jpg",
+  },
+ 
+  {
+    id: 3,
+    title: "Dried Seeds",
+    description: "Fenugreek",
+    image: "/images/4.jpg",
+  },
+ 
+  {
+    id: 4,
+    title: "Dried Seeds",
+    description: "Fenugreek",
+    image: "/images/4.jpg",
+  },
+ 
+  {
+    id: 5,
+    title: "Dried Seeds",
+    description: "Fenugreek",
+    image: "/images/1.jpg",
+  },
+  {
+    id: 5,
+    title: "Dried Seeds",
+    description: "Fenugreek",
+    image: "/images/4.jpg",
+  },
+ 
 ];

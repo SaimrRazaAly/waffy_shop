@@ -55,11 +55,11 @@ export const Blog_Post_Card = ({
   author,
 }) => {
   <div>
-    <div className="relative w-[80%] h-[50%]">
+    <div className="relative w-[400px] h-[200px]">
       <Image src={image} alt={title} fill />
     </div>
     <div>
-      <h2 className="">{title}</h2>
+      <h2 className="text-4xl">{title}</h2>
       <ul>
         <li>{author}</li>
         <li>{date}</li>
