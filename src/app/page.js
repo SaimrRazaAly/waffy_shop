@@ -1,5 +1,6 @@
 import Banner from "@/Components/Banner";
 import Footer from "@/Components/Footer";
+import Blog_Post from "@/sections/Blog_Post";
 import Hero from "@/sections/Hero";
 import Offers from "@/sections/Offers";
 import Premium_Products from "@/sections/Premium_Products";
@@ -17,6 +18,7 @@ const Home = () => {
       <Offers row={"row-reverse"} />
       <Banner/>
       <Team/>
+      <Blog_Post/>
       <Premium_Products/>
       <Services/>
       <Footer/>

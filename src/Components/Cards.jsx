@@ -45,3 +45,27 @@ export const Team_Card = ({ name, profession, image }) => {
     </div>
   );
 };
+
+export const Blog_Post_Card = ({
+  image,
+  title,
+  description,
+  date,
+  comments,
+  author,
+}) => {
+  <div>
+    <div className="relative w-[80%] h-[50%]">
+      <Image src={image} alt={title} fill />
+    </div>
+    <div>
+      <h2 className="">{title}</h2>
+      <ul>
+        <li>{author}</li>
+        <li>{date}</li>
+        <li>{comments}</li>
+      </ul>
+      <p>{description}</p>
+    </div>
+  </div>;
+};
