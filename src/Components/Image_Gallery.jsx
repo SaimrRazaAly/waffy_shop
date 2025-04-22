@@ -4,7 +4,7 @@ import { Items_data } from "@/constants/data";
 
 const Image_Gallery = () => {
   return (
-    <div className="flex xl:flex-row my-20 flex-col gap-5 items-center justify-center md:px-5 overflow-hidden">
+    <div className="flex xl:flex-row my-20 flex-col gap-5 items-center justify-center md:px-5 overflow-hidden ">
       {Items_data.map((v, i) => {
         return (
           <Image_Gallery_Card
@@ -25,12 +25,12 @@ export default Image_Gallery;
 // =================== Card Component ================================
 export const Image_Gallery_Card = ({ image, title, desc, i }) => {
   return (
-    <div className="relative transition-all duration-500  w-full h-[300px] hover:scale-110  group overflow-hidden ">
-      <div
-        className={`relative xl:w-[200px] ${
-          i === 0 ? "xl:h-[660px]" : "xl:h-[300px]"
-        }`}
-      >
+    <div className="relative transition-all duration-500  w-full h-[300px] hover:scale-110  group overflow-hidden border border-amber-400">
+     <div
+  className={`relative w-full h-[300px] xl:w-[200px] ${
+    i === 0 ? "xl:h-[660px]" : "xl:h-[300px]"
+  }`}
+>
         <Image
           src={image}
           fill
