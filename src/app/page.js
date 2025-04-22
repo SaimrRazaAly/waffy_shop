@@ -1,8 +1,10 @@
 import Banner from "@/Components/Banner";
+import Footer from "@/Components/Footer";
 import Hero from "@/sections/Hero";
 import Offers from "@/sections/Offers";
 import Premium_Products from "@/sections/Premium_Products";
 import Products from "@/sections/Products";
+import Services from "@/sections/services";
 import Team from "@/sections/Team";
 
 const Home = () => {
@@ -16,6 +18,8 @@ const Home = () => {
       <Banner/>
       <Team/>
       <Premium_Products/>
+      <Services/>
+      <Footer/>
     </>
   );
 };

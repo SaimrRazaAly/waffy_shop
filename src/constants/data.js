@@ -38,7 +38,7 @@ export const Team_data = [
   },
 ];
 
-export const Services_data = [
+export const Premium_Products_data = [
   {
     id: 1,
     title: "Dried Seeds",
@@ -68,33 +68,31 @@ export const Services_data = [
     image: "/images/5.jpg",
   },
 ];
-export const Premium_Products_data = [
+// imports
+
+import { IoIosTimer } from "react-icons/io";
+import { GrPowerCycle } from "react-icons/gr";
+import { FaShoppingBag } from "react-icons/fa";
+export const Services_data = [
   {
     id: 1,
     title: "Dried Seeds",
     description:
       "Korem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
-    image: "/images/5.jpg",
+    image: <FaShoppingBag/>,
   },
   {
     id: 2,
     title: "Good Seeds",
     description:
-      "Korem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
-    image: "/images/5.jpg",
+      "Sit amet dolor consecteur adipisicing elitsed do eiusmod tempor incididunt ulabore et dolore ulabore et dolore.",
+    image: <FaShoppingBag/>,
   },
   {
     id: 3,
     title: "Bad Seeds",
     description:
       "Korem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
-    image: "/images/5.jpg",
-  },
-  {
-    id: 4,
-    title: "Bad Seeds",
-    description:
-      "Korem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
-    image: "/images/5.jpg",
+    icon: <FaShoppingBag/>,
   },
 ];
