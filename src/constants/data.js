@@ -20,3 +20,10 @@ export const products = [
   { id: 2, title: "Good Seeds", price: 99, image: "/images/1.jpg" },
   { id: 3, title: "Bad Seeds", price: 120, image: "/images/1.jpg" },
 ];
+
+export const Team_data = [
+  { id: 1, title: "ali", profession:"Develper", image: "/images/1Client.jpg" },
+  { id: 2, title: "H2", profession:"Develper", image: "/images/1Client.jpg" },
+  { id: 3, title: "asdjflkasf", profession:"Develper", image: "/images/1Client.jpg" },
+  { id: 4, title: "Bad Seeds", profession:"Develper", image: "/images/1Client.jpg" },
+];
