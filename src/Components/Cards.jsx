@@ -54,7 +54,7 @@ export const Blog_Post_Card = ({
   comments,
   author,
 }) => {
-  <div>
+  <div className="border border-amber-400 p-2">
     <div className="relative w-[400px] h-[200px]">
       <Image src={image} alt={title} fill />
     </div>

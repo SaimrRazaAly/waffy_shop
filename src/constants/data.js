@@ -154,7 +154,7 @@ export const Items_data = [
     image: "/images/1.jpg",
   },
   {
-    id: 5,
+    id: 6,
     title: "Dried Seeds",
     description: "Fenugreek",
     image: "/images/4.jpg",
