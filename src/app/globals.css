@@ -5,4 +5,7 @@
 .before_Image {
     @apply before:content-[''] before:absolute before:bg-[url('/images/2.jpg')] before:bg-cover before:w-full before:h-full before:bg-center before:brightness-50 before:-z-10 
 }
+.links_hover_Color{
+    @apply hover:text-amber-400 transition-all duration-500 text-white
+}
 }

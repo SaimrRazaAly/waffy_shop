@@ -19,6 +19,7 @@ export const products = [
   { id: 1, title: "Dried Seeds", price: 100, image: "/images/1.jpg" },
   { id: 2, title: "Good Seeds", price: 99, image: "/images/1.jpg" },
   { id: 3, title: "Bad Seeds", price: 120, image: "/images/1.jpg" },
+  { id: 4, title: "Bad Seeds", price: 120, image: "/images/1.jpg" },
 ];
 
 export const Team_data = [
@@ -132,21 +133,21 @@ export const Items_data = [
     description: "Fenugreek",
     image: "/images/2.jpg",
   },
- 
+
   {
     id: 3,
     title: "Dried Seeds",
     description: "Fenugreek",
     image: "/images/4.jpg",
   },
- 
+
   {
     id: 4,
     title: "Dried Seeds",
     description: "Fenugreek",
     image: "/images/4.jpg",
   },
- 
+
   {
     id: 5,
     title: "Dried Seeds",
@@ -159,5 +160,19 @@ export const Items_data = [
     description: "Fenugreek",
     image: "/images/4.jpg",
   },
- 
+];
+
+export const Navbar_data = [
+  { id: 1, title: "Home", link: "/" },
+  { id: 3, title: "Gourmet Foods ", link: "/collections" },
+  { id: 4, title: "Shop", link: "/collections/all" },
+  { id: 5, title: "Grocery", link: "/collections/roaster-seeds" },
+  { id: 6, title: "Cooking Oil", link: "/collections/dried-masalas" },
+  { id: 7, title: "Beverages", link: "/collections/spicy-seeds" },
+
+ [
+    { id: 2, title: "About", link: "/pages/about-us" },
+    { id: 5, title: "Contact", link: "/pages/faqs" },
+    { id: 6, title: "Contact", link: "/pages/contact" },
+  ],
 ];
