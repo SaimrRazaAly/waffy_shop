@@ -1,11 +1,25 @@
 @import "tailwindcss";
 
-
 @layer components {
-.before_Image {
-    @apply before:content-[''] before:absolute before:bg-[url('/images/2.jpg')] before:bg-cover before:w-full before:h-full before:bg-center before:brightness-50 before:-z-10 
+  .before_Image {
+    @apply before:content-[''] before:absolute before:bg-[url('/images/2.jpg')] before:bg-cover before:w-full before:h-full before:bg-center before:brightness-50 before:-z-10;
+  }
+
+  .Fav_item_Card_behind {
+    @apply before:content-[''] before:absolute before:bg-amber-950 before:bg-cover before:w-[35%] before:h-[60%] before:left-[15%] before:-top-[2%] before:-z-10;
+  }
+  .links_hover_Color {
+    @apply hover:text-amber-400 transition-all duration-500 text-white;
+  }
+  .main_text{
+    @apply font-bold font-serif text-amber-900
+  }
+  .input_style{
+    @apply w-full border border-gray-300 rounded-full px-4 py-3 focus:outline-none transition-all duration-500 hover:border-amber-900
+  }
 }
-.links_hover_Color{
-    @apply hover:text-amber-400 transition-all duration-500 text-white
-}
+
+::selection {
+  background: #9f4103;
+  color: white;
 }
