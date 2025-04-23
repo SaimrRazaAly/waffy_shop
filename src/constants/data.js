@@ -199,3 +199,55 @@ export const Unique_flavors_data = [
     para: "Sed vestibulum nulla elementum auctor tincidunt. Aliquam sit amet cursus mauris. Sed vitae mattis ipsum. Vestibulum enim nulla, sollicitudin ac hendrerit nec, tempor quis nisl",
   },
 ];
+
+export const Clients_data = [
+  {
+    name: "Johanna",
+    profession: "Designer",
+    message:
+      "Fringilla est ullamcorper eget nulla facilisi etiam dignissim diam. Ac felis donec et odio pellentesque diam volutpat. Justo nec ultrices dui sapien eget mi proin sed libero. Purus ut faucibus pulvinar elementum inte.",
+  },
+  {
+    name: "Charlotte",
+    profession: "Professor",
+    message:
+      "Fringilla est ullamcorper eget nulla facilisi etiam dignissim diam. Ac felis donec et odio pellentesque diam volutpat. Justo nec ultrices dui sapien eget mi proin sed libero. Purus ut faucibus pulvinar elementum inte.",
+  },
+  {
+    name: "Maximilian",
+    profession: "Developer",
+    message:
+      "Fringilla est ullamcorper eget nulla facilisi etiam dignissim diam. Ac felis donec et odio pellentesque diam volutpat. Justo nec ultrices dui sapien eget mi proin sed libero. Purus ut faucibus pulvinar elementum inte.",
+  },
+];
+
+
+
+
+export const faqsData = [
+  {
+    question: "How will my order be delivered to me?",
+    answer:
+      "Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Eu augue ut lectus arcu bibendum at. Nunc sed augue lacus viverra vitae congue eu.",
+  },
+  {
+    question: "What do I need to know?",
+    answer:
+      "Arcu cursus euismod quis viverra nibh cras pulvinar mattis nunc. Ut diam quam nulla porttitor massa id neque.",
+  },
+  {
+    question: "How will I know if order is placed successfully?",
+    answer:
+      "Elementum eu facilisis sed odio morbi quis commodo. Mollis aliquam ut porttitor leo a diam sollicitudin tempor.",
+  },
+  {
+    question: "How do I check the status of my order?",
+    answer:
+      "Pellentesque habitant morbi tristique senectus et netus et malesuada fames. Enim eu turpis egestas pretium aenean.",
+  },
+  {
+    question: "Can I cancel my order?",
+    answer:
+      "Ut diam quam nulla porttitor massa id neque. Elementum eu facilisis sed odio morbi quis commodo.",
+  },
+]
