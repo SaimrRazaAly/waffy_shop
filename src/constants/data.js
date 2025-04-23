@@ -170,9 +170,32 @@ export const Navbar_data = [
   { id: 6, title: "Cooking Oil", link: "/collections/dried-masalas" },
   { id: 7, title: "Beverages", link: "/collections/spicy-seeds" },
 
- [
+  [
     { id: 2, title: "About", link: "/pages/about-us" },
     { id: 5, title: "Contact", link: "/pages/faqs" },
     { id: 6, title: "Contact", link: "/pages/contact" },
   ],
+];
+
+export const Unique_flavors_data = [
+  {
+    id: 1,
+    title: "Flavoues",
+    para: "Sed vestibulum nulla elementum auctor tincidunt. Aliquam sit amet cursus mauris. Sed vitae mattis ipsum. Vestibulum enim nulla, sollicitudin ac hendrerit nec, tempor quis nisl",
+  },
+  {
+    id: 2,
+    title: "Flavoues",
+    para: "Sed vestibulum nulla elementum auctor tincidunt. Aliquam sit amet cursus mauris. Sed vitae mattis ipsum. Vestibulum enim nulla, sollicitudin ac hendrerit nec, tempor quis nisl",
+  },
+  {
+    id: 3,
+    title: "Flavoues",
+    para: "Sed vestibulum nulla elementum auctor tincidunt. Aliquam sit amet cursus mauris. Sed vitae mattis ipsum. Vestibulum enim nulla, sollicitudin ac hendrerit nec, tempor quis nisl",
+  },
+  {
+    id: 4,
+    title: "Flavoues",
+    para: "Sed vestibulum nulla elementum auctor tincidunt. Aliquam sit amet cursus mauris. Sed vitae mattis ipsum. Vestibulum enim nulla, sollicitudin ac hendrerit nec, tempor quis nisl",
+  },
 ];
