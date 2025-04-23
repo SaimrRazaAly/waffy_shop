@@ -8,7 +8,7 @@ import React from "react";
 const Products = () => {
   return (
     <section>
-      <div className="flex items-center justify-center flex-col gap-5 mt-10">
+      <div className="flex items-center justify-center flex-col gap-5 ">
         <Sec_Heading
           title={"Best Products"}
           para={
