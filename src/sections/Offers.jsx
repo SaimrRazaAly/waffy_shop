@@ -9,7 +9,7 @@ const Offers = ({row}) => {
     <div className={`mx-auto py-5 flex flex-col ${row === "row-reverse" ? "xl:flex-row-reverse" : "xl:flex-row"} gap-5 justify-center items-center px-2`}>
 
       <div className="">
-        <div className=" md:w-[740px] xl:w-[400px] w-[350px] xl:h-[660px] h-[250px] mt-10 overflow-hidden relative group">
+        <div className=" md:w-[740px] xl:w-[400px] sm:w-[350px] w-[270px] xl:h-[660px] h-[250px] mt-10 overflow-hidden relative group">
           <Image
             src={images.Image2}
             alt="Foods"

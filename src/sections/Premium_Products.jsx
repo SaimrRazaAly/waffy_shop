@@ -6,20 +6,20 @@ import Border_Btn from "@/Components/Border_Btn";
 
 const Premium_Products = () => {
   return (
-    <section className="py-10 md:px-4 px-2 bg-slate-300">
+    <section className="py-10 md:px-4 sm:px-2 bg-slate-300">
       <Sec_Heading
         title={"Premium Quality Products"}
         para={
           "At volutpat diam ut venenatis tellus in metus vulputate sit set ramet sagit."
         }
       />
-      <div className="flex flex-wrap mx-auto items-center justify-center mt-10">
+      <div className="flex flex-wrap mx-auto gap-1 items-center justify-center mt-10 border ">
         {Premium_Products_data.map((v, i) => (
           <div
-            className="sm:max-w-[300px] px-7 md:px-0 flex flex-col items-center justify-center mx-2 my-5"
+            className="sm:max-w-[300px] border-red-900 px-7 md:px-0 flex flex-col items-center justify-center mx-2 my-5"
             key={v.id}
           >
-            <div className="relative w-[300px] h-[280px]">
+            <div className="relative sm:w-[300px] w-[100%] h-[280px]">
               <Image
                 src={v.image}
                 alt={v.title}

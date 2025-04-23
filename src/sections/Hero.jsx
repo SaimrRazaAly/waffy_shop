@@ -2,7 +2,8 @@
 
 import Navbar from "@/Components/Navbar";
 import { useState } from "react";
-
+import { GrLinkNext, GrPrevious } from "react-icons/gr";
+import { GrLinkPrevious } from "react-icons/gr";
 const slides = [
   {
     image: "/images/1.jpg",
@@ -34,7 +35,7 @@ export default function Carousel() {
 
   return (
     <section className="w-full   h-screen">
-      <Navbar/>
+      {/* <Navbar/> */}
       <div className="overflow-hidden absolute top-0 ">
         <div
           className="flex transition-transform duration-500 ease-in-out transform"
@@ -54,13 +55,13 @@ export default function Carousel() {
 
               {/* Text Content */}
               <div className="absolute top-[59%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white z-10">
-                <h2 className="sm:text-5xl  text-4xl mt-10 font-serif italic font-semibold">
+                <h2 className="sm:text-5xl  text-2xl mt-10 font-serif italic font-semibold">
                   {slide.heading}
                 </h2>
-                <h3 className="text-4xl mt-4 text-yellow-500 border-t border-red-500 border-b py-2">
+                <h3 className="sm:text-4xl text-[20px] mt-4 text-yellow-500 border-t border-red-500 border-b py-2">
                   {slide.subheading}
                 </h3>
-                <h3 className="text-2xl mt-2 text-yellow-500">
+                <h3 className="sm:text-2xl  text-bold text-[17px] mt-2 text-yellow-500">
                   {slide.coupon}
                 </h3>
               </div>
@@ -70,44 +71,18 @@ export default function Carousel() {
       </div>
 
       <button
-        className="absolute top-1/2 left-0 transform -translate-y-1/2 p-3 bg-gray-700 bg-opacity-50 rounded-full text-white hover:bg-opacity-75 focus:outline-none"
+        className="absolute top-1/2 left-2 transform -translate-y-1/2 sm:p-3 p-1 bg-gray-700 bg-opacity-50 rounded-full text-white hover:bg-opacity-75 focus:outline-none"
         onClick={() => scrollCarousel(-1)}
         aria-label="Previous Slide"
       >
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M15 19l-7-7 7-7"
-          ></path>
-        </svg>
+      <GrLinkPrevious/>
       </button>
       <button
-        className="absolute top-1/2 right-0 transform -translate-y-1/2 p-3 bg-gray-700 bg-opacity-50 rounded-full text-white hover:bg-opacity-75 focus:outline-none"
+        className="absolute top-1/2 right-2 transform -translate-y-1/2 sm:p-3 p-1 bg-gray-700 bg-opacity-50 rounded-full text-white hover:bg-opacity-75 focus:outline-none"
         onClick={() => scrollCarousel(1)}
         aria-label="Next Slide"
-      >
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M9 5l7 7-7 7"
-          ></path>
-        </svg>
+          <GrLinkNext/>
       </button>
     </section>
   );

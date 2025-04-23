@@ -87,14 +87,14 @@ export const Services_data = [
     title: "Good Seeds",
     description:
       "Sit amet dolor consecteur adipisicing elitsed do eiusmod tempor incididunt ulabore et dolore ulabore et dolore.",
-    image: <FaShoppingBag />,
+    image: <GrPowerCycle />,
   },
   {
     id: 3,
     title: "Bad Seeds",
     description:
       "Korem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
-    icon: <FaShoppingBag />,
+    icon: <IoIosTimer />,
   },
 ];
 

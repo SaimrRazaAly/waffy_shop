@@ -14,7 +14,7 @@ const Home = () => {
     <>
       <Hero />
       <Products />
-      <Banner banner1={true} />
+      <Banner banner1={true} />/
       <Offers row={"row"} />
       <Offers row={"row-reverse"} />
       <Banner/>
@@ -23,7 +23,6 @@ const Home = () => {
       <Blog_Post/>
       <Premium_Products/>
       <Services/>
-      <Footer/>
     </>
   );
 };

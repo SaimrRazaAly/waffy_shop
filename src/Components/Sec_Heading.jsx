@@ -3,7 +3,7 @@ import React from 'react'
 const Sec_Heading = ({title,para}) => {
   return (
     <div className='text-center'>
-        <h2 className='text-5xl text-amber-900 font-semibold italic mb-4 font-serif'>{title}</h2>
+        <h2 className='md:text-5xl sm:text-4xl text-3xl text-amber-900 font-semibold italic mb-4 font-serif'>{title}</h2>
         <p>{para}</p>
     </div>
   )

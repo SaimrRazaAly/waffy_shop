@@ -37,8 +37,8 @@ const Navbar = () => {
       {/* Icons (always visible at top right) */}
 
       <div
-        className=" gap-4 text-xl flex justify-between items-center  w-[90%] py-3 px-2
-       bg-black text-white "
+        className=" gap-4 text-xl flex justify-between items-center   w-[90%] py-3 px-2
+       bg-black xl:bg-transparent text-white "
       >
         <div
           className="lg:hidden text-2xl cursor-pointer links_hover_Color "
@@ -46,28 +46,29 @@ const Navbar = () => {
         >
           <RxHamburgerMenu />
         </div>
-        <div className="lg:hidden flex gap-2 items-center justify-center lg:gap-4">
+        {/* smally */}
+        <div className="lg:hidden flex gap-4 items-center justify-center lg:gap-4">
           <CiSearch className="links_hover_Color" />
+          <span>USD </span>
           <FaCartShopping className="links_hover_Color" />
           <FaUser className="links_hover_Color" />
-          <span>USD </span>
         </div>
 
         {/* on screen huge */}
         <div
           className={`${
-            isSticky ? "lg:fixed lg:py-4 lg:top-0 lg:px-20 lg:left-0 lg:justify-center lg:gap-32 lg:items-center " : ""
-          }  lg:flex lg:flex-row-reverse py-2  lg:justify-between  lg:items-center hidden lg:bg-black lg:text-white lg:w-[110%]`}
+            isSticky ? "lg:fixed lg:w-full lg:py-4 lg:top-0 lg:px-20 lg:left-0   lg:items-center " : ""
+          }  lg:flex lg:flex-row-reverse   lg:justify-between  lg:items-center  py-4 px-5 hidden lg:bg-black lg:text-white lg:w-[110%]`}
         >
           <div className="hidden lg:flex gap-2 items-center justify-center lg:gap-4">
             <CiSearch className="links_hover_Color" />
+            <span>USD </span>
             <FaCartShopping className="links_hover_Color" />
             <FaUser className="links_hover_Color" />
-            <span>USD </span>
           </div>
 
           {/* Hamburger Menu on Mobile */}
-          <nav className={`hidden lg:basis-[65%] ${isSticky ? "lg:basis-10 lg:px-4 lg:py-2 -translate-x-20 " : ""}   lg:flex items-center  justify-end gap-8 mt-3 lg:text-white text-black text-[18px]`}>
+          <nav className={`hidden  ${isSticky ? " lg:px-4 lg:py-2  " : ""}   lg:flex items-center  justify-end gap-8 mt-3 lg:text-white text-black text-[18px]`}>
             {Navbar_data.slice(0, 6).map((v) => (
               <Link
                 href={v.link}
@@ -82,12 +83,12 @@ const Navbar = () => {
       </div>
       {/* Mobile Slide-In Menu */}
       <div
-        className={`fixed top-0 right-0 transition-all lg:w-0 duration-500 ${
+        className={`fixed top-0 right-0 transition-all lg:w-0 duration-500 ease-in-out ${
           click ? "w-screen" : "w-0"
         } bg-[#000000c2] h-screen overflow-y-hidden -z-10`}
       />
       <div
-        className={`fixed text-start top-0 right-0 h-full sm:w-[300px] w-[60%] bg-white z-50 transform transition-transform duration-700 ease-in-out ${
+        className={`fixed  top-0 right-0 h-full sm:w-[300px] w-[60%] bg-white z-50 transform transition-transform duration-700 ease-in-out ${
           click ? "translate-x-0" : "translate-x-full"
         } lg:hidden`}
       >
@@ -100,13 +101,13 @@ const Navbar = () => {
         </div>
 
         {/* Slide-in Nav Links */}
-        <ul className="flex flex-col items-center justify-center h-full gap-5 text-black text-lg">
+        <ul className={`flex flex-col   ${click ? "items-start" : "items-center"} justify-center h-full gap-5 text-black text-lg`}>
           {Navbar_data.slice(0, 6).map((v) => (
-            <li key={v.id}>
+            <li key={v.id} className="text-2xl lg:text-[16px] lg:mb-0 mb-3 ml-5 w-full lg:w-auto border-slate-200 border-b-[0.5px]">
               <Link
                 href={v.link}
                 onClick={() => setClick(false)}
-                className="hover:text-amber-500 transition"
+                className="hover:text-amber-500 transition  "
               >
                 {v.title}
               </Link>
