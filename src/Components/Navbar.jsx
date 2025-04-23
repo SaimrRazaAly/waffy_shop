@@ -2,7 +2,7 @@
 import { Navbar_data } from "@/constants/data";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 import { RxHamburgerMenu } from "react-icons/rx";
 import { HiX } from "react-icons/hi";
@@ -12,52 +12,82 @@ import { FaUser } from "react-icons/fa";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsSticky(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="relative w-full flex flex-col gap-5 items-center justify-center  shadow-md p-3 z-50">
+    <header className="relative top-0 w-full flex flex-col gap-5 items-center justify-center  p-3 z-50">
       {/* Top Row: Logo + Icons */}
       <div className="flex items-center justify-between px-4">
         <Image
           src={"/images/1main_logo.png"}
-          width={100}
-          height={100}
+          width={200}
+          height={200}
           alt="logo"
         />
       </div>
       {/* Icons (always visible at top right) */}
 
-      <div className=" gap-4 text-xl flex justify-between items-center  w-[90%] py-3 px-2
-       bg-black text-white ">
+      <div
+        className=" gap-4 text-xl flex justify-between items-center  w-[90%] py-3 px-2
+       bg-black text-white "
+      >
         <div
-          className="lg:hidden text-2xl cursor-pointerhover:text-amber-400 transition-all duration-500 "
+          className="lg:hidden text-2xl cursor-pointer links_hover_Color "
           onClick={() => setClick(true)}
         >
           <RxHamburgerMenu />
         </div>
-        <div className="flex gap-2 items-center justify-center">
-          <CiSearch className="links_hover_Colo" />
-          <FaCartShopping  className="links_hover_Colo"/>
-          <FaUser className="links_hover_Colo" />
+        <div className="lg:hidden flex gap-2 items-center justify-center lg:gap-4">
+          <CiSearch className="links_hover_Color" />
+          <FaCartShopping className="links_hover_Color" />
+          <FaUser className="links_hover_Color" />
+          <span>USD </span>
+        </div>
+
+        {/* on screen huge */}
+        <div
+          className={`${
+            isSticky ? "lg:fixed lg:py-4 lg:top-0 lg:px-20 lg:left-0 lg:justify-center lg:gap-32 lg:items-center " : ""
+          }  lg:flex lg:flex-row-reverse py-2  lg:justify-between  lg:items-center hidden lg:bg-black lg:text-white lg:w-[110%]`}
+        >
+          <div className="hidden lg:flex gap-2 items-center justify-center lg:gap-4">
+            <CiSearch className="links_hover_Color" />
+            <FaCartShopping className="links_hover_Color" />
+            <FaUser className="links_hover_Color" />
+            <span>USD </span>
+          </div>
+
+          {/* Hamburger Menu on Mobile */}
+          <nav className={`hidden lg:basis-[65%] ${isSticky ? "lg:basis-10 lg:px-4 lg:py-2 -translate-x-20 " : ""}   lg:flex items-center  justify-end gap-8 mt-3 lg:text-white text-black text-[18px]`}>
+            {Navbar_data.slice(0, 6).map((v) => (
+              <Link
+                href={v.link}
+                key={v.id}
+                className="hover:text-amber-500 transition"
+              >
+                {v.title}
+              </Link>
+            ))}
+          </nav>
         </div>
       </div>
-      {/* Hamburger Menu on Mobile */}
-
-      {/* Desktop Nav */}
-      <nav className="hidden lg:flex items-center justify-center gap-8 mt-3 text-black text-[18px]">
-        {Navbar_data.slice(0, 6).map((v) => (
-          <Link
-            href={v.link}
-            key={v.id}
-            className="hover:text-amber-500 transition"
-          >
-            {v.title}
-          </Link>
-        ))}
-      </nav>
-
       {/* Mobile Slide-In Menu */}
       <div
-        className={`fixed top-0 right-0 h-full sm:w-[300px] w-[60%] bg-white z-50 transform transition-transform duration-500 ease-in-out ${
+        className={`fixed top-0 right-0 transition-all lg:w-0 duration-500 ${
+          click ? "w-screen" : "w-0"
+        } bg-[#000000c2] h-screen overflow-y-hidden -z-10`}
+      />
+      <div
+        className={`fixed text-start top-0 right-0 h-full sm:w-[300px] w-[60%] bg-white z-50 transform transition-transform duration-700 ease-in-out ${
           click ? "translate-x-0" : "translate-x-full"
         } lg:hidden`}
       >
