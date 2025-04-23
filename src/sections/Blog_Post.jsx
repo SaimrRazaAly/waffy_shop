@@ -1,94 +1,113 @@
 "use client";
 
 import React, { useState } from "react";
-import Navbar from "@/Components/Navbar";
+import Border_Btn from "@/Components/Border_Btn";
+import Sec_Heading from "@/Components/Sec_Heading";
+import { Blog_Post_data } from "@/constants/data";
+import Image from "next/image";
+import { FaUser } from "react-icons/fa";
+import { HiCalendarDateRange } from "react-icons/hi2";
+import { LiaCommentsSolid } from "react-icons/lia";
 
-const slides = [
-  {
-    image: "/images/1.jpg",
-    heading: "Herbs and Spices",
-    subheading: "FLAT 10% OFF",
-    coupon: "USE COUPON: 1234",
-  },
-  {
-    image: "/images/2.jpg",
-    heading: "Organic Masalas",
-    subheading: "Buy 1 Get 1 Free",
-    coupon: "USE COUPON: MASALA",
-  },
-  {
-    image: "/images/4.jpg",
-    heading: "Homegrown Spices",
-    subheading: "20% OFF Today",
-    coupon: "USE COUPON: SPICE20",
-  },
-];
+import { GrLinkNext } from "react-icons/gr";
+import { GrLinkPrevious } from "react-icons/gr";
 
-const Hero = () => {
+const Blog_Post = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length); // Loop back to first slide
+    setCurrentIndex((prev) =>
+      prev === Blog_Post_data.length - 1 ? 0 : prev + 1
+    );
   };
 
   const prevSlide = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + slides.length) % slides.length // Loop back to last slide
+    setCurrentIndex((prev) =>
+      prev === 0 ? Blog_Post_data.length - 1 : prev - 1
     );
   };
 
   return (
-    <section className="relative lg:h-[120vh] h-screen overflow-hidden">
-      <Navbar />
+    <section className="my-10 overflow-hidden xl:px-30">
+      <Sec_Heading
+        title={"Blog Post"}
+        para={"Suspendisse potenti nullam ac tortor vitae purus faucibus orn."}
+      />
 
-      {/* Slide Container */}
-      <div
-        className="flex transition-transform duration-700 ease-in-out"
-        style={{
-          transform: `translateX(-${currentIndex * 100}%)`, // Horizontal sliding effect
-          width: `${slides.length * 100}%`, // Ensure that all slides are in one line horizontally
-        }}
-      >
-        {slides.map((slide, index) => (
-          <div
-            key={index}
-            className="w-full flex-shrink-0 bg-cover bg-center"
-            style={{
-              backgroundImage: `url(${slide.image})`,
-            }}
-          >
-            {/* Text Content */}
-            <div className="relative z-10 h-full flex flex-col items-center justify-center text-white text-center px-4">
-              <h2 className="text-5xl font-serif italic font-semibold">{slide.heading}</h2>
-              <h3 className="text-4xl mt-4 text-yellow-500 border-t border-red-500 border-b py-2">
-                {slide.subheading}
-              </h3>
-              <h3 className="text-2xl mt-2 text-yellow-500">
-                {slide.coupon.split(":")[0]}:{" "}
-                <span className="text-white font-bold">{slide.coupon.split(":")[1]}</span>
-              </h3>
+      <div className="relative w-full overflow-hidden">
+        <div
+          className="flex transition-transform duration-500 ease-in-out"
+          style={{
+            width: `${Blog_Post_data.length * 100}%`,
+            transform: `translateX(-${
+              currentIndex * (100 / Blog_Post_data.length)
+            }%)`,
+          }}
+        >
+          {Blog_Post_data.map((v) => (
+            <div
+              key={v.id}
+              className="w-full relative flex-shrink-0 px-5 flex flex-col xl:flex-row items-center justify-center gap-5 border border-amber-400 p-2"
+              style={{ width: `${100 / Blog_Post_data.length}%` }}
+            >
+              {/* Image */}
+              <div className="lg:w-[400px] lg:h-[300px] relative w-full sm:h-[500px] h-[400px] rounded-md overflow-hidden">
+                <Image
+                  src={v.image}
+                  alt={v.title}
+                  fill
+                  className="object-center object-cover"
+                />
+              </div>
+
+              {/* Text */}
+              <div className="flex flex-col gap-5 items-start">
+                <h2 className="text-4xl font-bold font-serif">{v.title}</h2>
+                <ul className="flex gap-2 flex-wrap text-[18px]">
+                  <li className="flex gap-1 items-center">
+                    <span className="text-amber-900">
+                      <FaUser />
+                    </span>
+                    {v.author} |
+                  </li>
+                  <li className="flex gap-1 items-center">
+                    <span className="text-amber-900">
+                      <HiCalendarDateRange />
+                    </span>
+                    {v.date} |
+                  </li>
+                  <li className="flex gap-1 items-center">
+                    <span className="text-amber-900">
+                      <LiaCommentsSolid />
+                    </span>
+                    {v.comments} comments
+                  </li>
+                </ul>
+                <p>{v.description}</p>
+                <Border_Btn title={"Read More"} />
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
 
-      {/* Navigation Buttons */}
-      <div className="flex gap-6 justify-between w-full absolute top-[10%] px-3 mt-10">
-        <button
-          onClick={prevSlide}
-          className="px-3 py-2 rounded-full bg-white text-black hover:bg-yellow-500 transition"
-        >
-          ⬅
-        </button>
-        <button
-          onClick={nextSlide}
-          className="px-3 py-2 rounded-full bg-white text-black hover:bg-yellow-500 transition"
-        >
-          ➡
-        </button>
+        {/* Controls */}
+        <div className="flex justify-center gap-5 mt-5">
+          <button
+            onClick={prevSlide}
+            className="bg-amber-500 text-white px-2 py-2 rounded-full cursor-pointer"
+          >
+            <GrLinkPrevious />
+          </button>
+          <button
+            onClick={nextSlide}
+            className=" bg-amber-500 text-white px-2 py-2 rounded-full cursor-pointer"
+          >
+            <GrLinkNext />
+          </button>
+        </div>
       </div>
     </section>
   );
 };
 
-export default Hero;
+export default Blog_Post;
