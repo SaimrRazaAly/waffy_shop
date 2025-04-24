@@ -21,13 +21,15 @@ export const Team_Card = ({ name, profession, image }) => {
   return (
     <div className="  border   border-amber-400  w-[270px]">
       <div className="h-[200px] flex items-center justify-center bg-amber-400">
+        <div className="relative w-[150px] h-[150px] overflow-hidden">
+
         <Image
-          src={image}
+          src={"/images/4.jpg"}
           alt="Dires"
-          width={150}
-          height={150}
-          className="rounded-full transition-all duration-500 border-8   hover:border-amber-900"
-        />
+          fill
+          className="rounded-full object-center object-cover transition-all duration-500 border-8   hover:border-amber-900"
+          />
+          </div>
       </div>
       <div className="h-[40%] flex flex-col items-center justify-center text-center mt-4 bg-white gap-6">
         <h2 className="text-4xl md:text-4xl font-bold font-serif text-amber-900 ">

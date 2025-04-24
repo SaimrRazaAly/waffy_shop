@@ -1,9 +1,8 @@
 import FAQSection from "@/Components/Faq";
 import Page_Hero_Banner from "@/Components/Page_Hero_Banner";
 import Sec_Heading from "@/Components/Sec_Heading";
-import React from "react";
 
- Faq = () => {
+const  Faq = () => {
   return (
     <>
       <Page_Hero_Banner title={"FAQ'S"} />

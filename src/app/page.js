@@ -10,6 +10,7 @@ import Services from "@/sections/services";
 import Team from "@/sections/Team";
 
 const Home = () => {
+
   return (
     <>
       <Hero />
@@ -17,12 +18,12 @@ const Home = () => {
       <Banner banner1={true} />/
       <Offers row={"row"} />
       <Offers row={"row-reverse"} />
-      <Banner/>
-      <Team/>
-      <Image_Gallery/>
-      <Blog_Post/>
-      <Premium_Products/>
-      <Services/>
+      <Banner />
+      <Team />
+      <Image_Gallery />
+      <Blog_Post />
+      <Premium_Products />
+      <Services />
     </>
   );
 };
