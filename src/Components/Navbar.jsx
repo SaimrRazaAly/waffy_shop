@@ -83,16 +83,16 @@ const Navbar = () => {
                   onClick={() => setClick(false)}
                   className="text-2xl lg:text-[16px] hover:text-amber-500 transition"
                 >
-                  {item.title}
+                                 { item.children ? item.title + " ↓"  :  item.title}
                 </Link>
 
                 {item.children && (
-                  <ul className="absolute overflow-hidden hidden group-hover:block focus:block bg-white border shadow-md mt-1 rounded-lg z-10 w-44">
+                  <ul className="absolute overflow-hidden opacity-0 group-hover:opacity-100 focus:block bg-white border shadow-md mt-1 transition-all duration-500  z-10 w-44">
                     {item.children.map((child) => (
-                      <li key={child.id}>
+                      <li key={child.id} className="border border-gray-200 ">
                         <Link
                           href={child.link}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                          className="block px-4 py-2 text-sm hover:text-amber-400 text-black "
                         >
                           {child.title}
                         </Link>
@@ -137,23 +137,22 @@ const Navbar = () => {
                 onClick={() => setClick(item.children ? true : false)}
                 className="text-2xl lg:text-[16px] hover:text-amber-500 transition"
               >
-                { item.children ? item.title + ">"  :  item.title}
+                { item.children ? item.title + " ↓"  :  item.title}
               </Link>
 
               {item.children && (
-                <ul className={`absolute overflow-hidden ${dropDown ? "block" :"hidden"} focus:block bg-white  shadow-md mt-1  z-10 md:w-44 w-60`}>
-                  {item.children.map((child) => (
-                    <li key={child.id} className="" onClick={()=> setdropDown(!dropDown)}>
-                      <Link
-                        href={child.link}
-                        className="block md:px-4 p-2 hover:bg-gray-300 md:py-2 text-sm hover:text-amber-400 transition-all duration-500 "
-                      >
-                        {child.title} 
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              )}
+                  <ul className="absolute overflow-hidden opacity-0 group-hover:opacity-100 focus:block bg-white   mt-3 transition-all duration-500 scale-105  z-10 w-44">
+                    {item.children.map((child) => (
+                      <li key={child.id} className="border border-gray-200 ">
+                        <Link
+                          href={child.link}
+                          className="block px-4 py-2 text-sm hover:text-amber-400 text-black "
+                        >
+                          {child.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>)}
             </li>
           ))}
         </ul>

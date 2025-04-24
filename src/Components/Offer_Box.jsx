@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Offer_Box = ({ title, image }) => {
   return (
-    <div className=" lg:w-[400px] lg:h-[300px] sm:w-[350px] w-[250px] h-[250px] md:mt-10 mt-0 overflow-hidden relative group">
+    <div className=" lg:w-[400px] lg:h-[300px] sm:w-[350px] w-[80%] mx-auto sm:mx-0 h-[250px] md:mt-10 mt-0 overflow-hidden relative group">
       <Image
         src={image}
         alt="Foods"
@@ -25,10 +25,10 @@ export default Offer_Box;
 export const OverLay = ({ title, para, row,classes }) => {
   return (
     <div
-      className={`absolute sm:bottom-10 top-2 sm:top-0 left-2 sm:left-0 bottom-14 right-3 sm:p-5 p-2 bg-[#000000c2] bg-opacity-30 ${classes}   ${
+      className={`absolute   sm:bottom-10 top-2  left-2 sm:left-0 bottom-14 right-3 sm:p-5 p-2 bg-[#000000c2] bg-opacity-30 ${classes}   ${
         row === "row-reverse"
-          ? "text-black bg-[#ffff] "
-          : "text-white bg-[#000000c2]"
+          ? "text-black bg-[#ffff]   sm:h-auto  h-[65%]"
+          : "text-white bg-[#000000c2]  sm:h-auto h-[65%]"
       }`}
     >
       <h2
