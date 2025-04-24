@@ -15,7 +15,7 @@ const Client_Area = () => {
         {/* Cards will come here */}
         {Clients_data.map((v, i) => {
           return (
-            <div key={v.id} className="lg:max-w-[400px]">
+            <div key={i} className="lg:max-w-[400px]">
               <p>
                 Fringilla est ullamcorper eget nulla facilisi etiam dignissim
                 diam. Ac felis donec et odio pellentesque diam volutpat. Justo

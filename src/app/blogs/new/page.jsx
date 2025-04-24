@@ -3,19 +3,20 @@ import Border_Btn from "@/Components/Border_Btn";
 import Image from "next/image";
 import { blogData } from "@/constants/data";
 import Link from "next/link";
+
 const Blog_Page = () => {
   return (
     <>
       <Page_Hero_Banner title={"News"} />
 
-      <div className=" mx-auto md:gap-5 gap-3 flex items-center justify-center flex-wrap px-5 py-20">
-        {blogData.map((v, i) => {
+      <div className="mx-auto md:gap-5 gap-3 flex items-center justify-center flex-wrap px-5 py-20">
+        {blogData.map((v) => {
           return (
             <div
               key={v.id}
-              className="sm:max-w-[300px] border-red-900 px-7 md:px-0 flex flex-col items-center justify-center mx-2 my-5"
+              className="md:max-w-[400px] px-4 flex flex-col items-center justify-center mx-2 my-5"
             >
-              <div className="relative sm:w-[300px] w-[100%] h-[280px]">
+              <div className="w-full aspect-[4/3] relative overflow-hidden">
                 <Image
                   src={v.image}
                   alt={v.title}
@@ -28,11 +29,11 @@ const Blog_Page = () => {
                 <h2 className="font-bold font-serif mb-5 text-2xl">
                   {v.title}
                 </h2>
-                <p className="mb-5">
+                <p className="mb-5 line-clamp-4 text-gray-600 md:text-md text-sm">
                   {v.description}
                 </p>
-                <Link href={v.title}>
-                <Border_Btn title={"Readmore"} />
+                <Link href={`/blogs/new/${v.title.replace(/\s+/g, "-")}`}>
+                  <Border_Btn title="Readmore" />
                 </Link>
               </div>
             </div>

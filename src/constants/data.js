@@ -317,7 +317,7 @@ export const blogData = [
     link: "/blogs/8", // Example link to the blog post detail page
   },
   {
-    id: 2,
+    id: 8,
     title: "Cayenne Pepper",
     description:
       "Cayenne pepper is a hot chili pepper that is used in many dishes to add heat and flavor. It’s also known for its health benefits, including improving metabolism...",
@@ -325,7 +325,7 @@ export const blogData = [
     link: "/blogs/2",
   },
   {
-    id: 3,
+    id: 9,
     title: "Paprika Benefits",
     description:
       "Paprika is a popular spice used in various cuisines around the world. It is packed with vitamins and antioxidants that can support your overall health...",

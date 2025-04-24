@@ -29,6 +29,7 @@
     animation-timing-function: ease-in;
   }
 }
+
 ::selection {
   background: #9f4103;
   color: white;
@@ -42,13 +43,23 @@
   .Fav_item_Card_behind {
     @apply before:content-[''] before:absolute before:bg-amber-950 before:bg-cover before:w-[35%] before:h-[60%] before:left-[15%] before:-top-[2%] before:-z-10;
   }
+
   .links_hover_Color {
     @apply hover:text-amber-400 transition-all duration-500 text-white;
   }
+
   .main_text {
     @apply font-bold font-serif text-amber-900;
   }
+
   .input_style {
     @apply w-full border border-gray-300 rounded-full px-4 py-3 focus:outline-none transition-all duration-500 hover:border-amber-900;
+  }
+
+  .new_Post {
+    @apply border border-slate-100 px-4 py-2 hover:bg-amber-400 transition-all duration-500 cursor-pointer;
+  }
+  .input_style_login{
+    @apply w-full px-4 py-3 rounded-full bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-600
   }
 }
