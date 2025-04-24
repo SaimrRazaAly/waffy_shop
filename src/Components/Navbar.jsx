@@ -13,7 +13,6 @@ import { FaUser } from "react-icons/fa";
 const Navbar = () => {
   const [click, setClick] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
-  const [dropDown, setdropDown] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,12 +27,14 @@ const Navbar = () => {
     <header className="relative top-0 w-full flex flex-col gap-5 items-center justify-center  p-3 z-50">
       {/* Top Row: Logo + Icons */}
       <div className="flex items-center justify-between px-4">
-        <Image
-          src={"/images/1main_logo.png"}
-          width={200}
-          height={200}
-          alt="logo"
-        />
+        <Link href="/">
+          <Image
+            src={"/images/1main_logo.png"}
+            width={200}
+            height={200}
+            alt="logo"
+          />
+        </Link>
       </div>
       {/* Icons (always visible at top right) */}
 
@@ -154,7 +155,7 @@ const Navbar = () => {
                   {item.children.map((child) => (
                     <li key={child.id} className="border border-gray-200 ">
                       <Link
-                      onClick={() => setClick(true)}
+                        onClick={() => setClick(true)}
                         href={child.link}
                         className="block px-4 py-2 text-sm hover:text-amber-400 text-black "
                       >

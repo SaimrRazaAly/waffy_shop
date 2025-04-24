@@ -1,11 +1,10 @@
-
-
 import React from "react";
 
 const Border_Btn = ({ border_color = "amber", title }) => {
   return (
     <button
-      className={`sm:px-6 sm:py-4 px-3 py-2 transition duration-500 hover:scale-110 cursor-pointer border-2 border-${border_color}-500 rounded-full font-light`}
+      className={`md:px-6 md:py-3 cursor-pointer
+           px-4 py-2 border-amber-900 border-2 transition-all duration-500 hover:bg-amber-400  hover:border-amber-400 rounded-full `}
     >
       {title}
     </button>
