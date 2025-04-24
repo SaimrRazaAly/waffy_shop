@@ -33,7 +33,7 @@ const Offers = ({row}) => {
       <div className="grid md:grid-cols-2 lg:grid-rows-2 md:gap-5 gap-2">
         {Offer_data.map((item, index) => {
           return (
-            <Offer_Box key={item.id} title={item.title} image={item.image} />
+            <Offer_Box key={item.id} title={item.title} image={item.image} classes={"!lg:h-[40%]"} />
           );
         })}
       </div>

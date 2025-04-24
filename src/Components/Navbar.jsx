@@ -52,7 +52,11 @@ const Navbar = () => {
           <CiSearch className="links_hover_Color" />
           <span>USD </span>
           <FaCartShopping className="links_hover_Color" />
-          <FaUser className="links_hover_Color" />
+          <Link href={"/account/login"}>
+            <button className="cursor-pointer">
+              <FaUser className="links_hover_Color" />
+            </button>
+          </Link>
         </div>
 
         {/* on screen huge */}
@@ -67,7 +71,11 @@ const Navbar = () => {
             <CiSearch className="links_hover_Color" />
             <span>USD </span>
             <FaCartShopping className="links_hover_Color" />
-            <FaUser className="links_hover_Color" />
+            <Link href={"/account/login"}>
+              <button className="cursor-pointer">
+                <FaUser className="links_hover_Color" />
+              </button>
+            </Link>
           </div>
 
           {/* Hamburger Menu on Mobile */}
@@ -83,7 +91,7 @@ const Navbar = () => {
                   onClick={() => setClick(false)}
                   className="text-2xl lg:text-[16px] hover:text-amber-500 transition"
                 >
-                                 { item.children ? item.title + " ↓"  :  item.title}
+                  {item.children ? item.title + " ↓" : item.title}
                 </Link>
 
                 {item.children && (
@@ -137,22 +145,23 @@ const Navbar = () => {
                 onClick={() => setClick(item.children ? true : false)}
                 className="text-2xl lg:text-[16px] hover:text-amber-500 transition"
               >
-                { item.children ? item.title + " ↓"  :  item.title}
+                {item.children ? item.title + " ↓" : item.title}
               </Link>
 
               {item.children && (
-                  <ul className="absolute overflow-hidden opacity-0 group-hover:opacity-100 focus:block bg-white   mt-3 transition-all duration-500 scale-105  z-10 w-44">
-                    {item.children.map((child) => (
-                      <li key={child.id} className="border border-gray-200 ">
-                        <Link
-                          href={child.link}
-                          className="block px-4 py-2 text-sm hover:text-amber-400 text-black "
-                        >
-                          {child.title}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>)}
+                <ul className="absolute overflow-hidden opacity-0 group-hover:opacity-100 focus:block bg-white   mt-3 transition-all duration-500 scale-105  z-10 w-44">
+                  {item.children.map((child) => (
+                    <li key={child.id} className="border border-gray-200 ">
+                      <Link
+                        href={child.link}
+                        className="block px-4 py-2 text-sm hover:text-amber-400 text-black "
+                      >
+                        {child.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </li>
           ))}
         </ul>

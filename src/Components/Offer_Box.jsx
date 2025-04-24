@@ -25,10 +25,10 @@ export default Offer_Box;
 export const OverLay = ({ title, para, row,classes }) => {
   return (
     <div
-      className={`absolute   sm:bottom-10 top-2  left-2 sm:left-0 bottom-14 right-3 sm:p-5 p-2 bg-[#000000c2] bg-opacity-30 ${classes}   ${
+      className={`absolute   sm:bottom-10 top-2 p-5  left-2 sm:left-0 bottom-14 right-3 sm:p-5 bg-[#000000c2] bg-opacity-30 ${classes}   ${
         row === "row-reverse"
-          ? "text-black bg-[#ffff]   sm:h-auto  h-[65%]"
-          : "text-white bg-[#000000c2]  sm:h-auto h-[65%]"
+          ? "text-black bg-[#ffff]  "
+          : "text-white bg-[#000000c2]  "
       }`}
     >
       <h2
