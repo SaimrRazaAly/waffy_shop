@@ -164,17 +164,22 @@ export const Items_data = [
 
 export const Navbar_data = [
   { id: 1, title: "Home", link: "/" },
-  { id: 3, title: "Gourmet Foods ", link: "/collections" },
+  { id: 3, title: "Gourmet Foods", link: "/collections" },
   { id: 4, title: "Shop", link: "/collections/all" },
   { id: 5, title: "Grocery", link: "/collections/roaster-seeds" },
   { id: 6, title: "Cooking Oil", link: "/collections/dried-masalas" },
   { id: 7, title: "Beverages", link: "/collections/spicy-seeds" },
-
-  [
-    { id: 2, title: "About", link: "/pages/about-us" },
-    { id: 5, title: "Contact", link: "/pages/faqs" },
-    { id: 6, title: "Contact", link: "/pages/contact" },
-  ],
+  {
+    id: 8,
+    title: "Pages",
+    link: "#",
+    children: [
+      { id: 21, title: "About", link: "/pages/about-us" },
+      { id: 22, title: "FAQs", link: "/pages/faqs" },
+      { id: 23, title: "Blog", link: "/blog/new" },
+      { id: 24, title: "Contact", link: "/pages/contact-us" },
+    ],
+  },
 ];
 
 export const Unique_flavors_data = [

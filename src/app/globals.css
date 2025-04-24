@@ -1,5 +1,39 @@
 @import "tailwindcss";
 
+@keyframes swing {
+  0% {
+    transform: rotate(0deg);
+    animation-timing-function: ease-out;
+  }
+  25% {
+    transform: rotate(70deg);
+    animation-timing-function: ease-in;
+  }
+  50% {
+    transform: rotate(0deg);
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes swing2 {
+  0% {
+    transform: rotate(0deg);
+    animation-timing-function: linear;
+  }
+  50% {
+    transform: rotate(0deg);
+    animation-timing-function: ease-out;
+  }
+  75% {
+    transform: rotate(-70deg);
+    animation-timing-function: ease-in;
+  }
+}
+::selection {
+  background: #9f4103;
+  color: white;
+}
+
 @layer components {
   .before_Image {
     @apply before:content-[''] before:absolute before:bg-[url('/images/2.jpg')] before:bg-cover before:w-full before:h-full before:bg-center before:brightness-50 before:-z-10;
@@ -11,15 +45,10 @@
   .links_hover_Color {
     @apply hover:text-amber-400 transition-all duration-500 text-white;
   }
-  .main_text{
-    @apply font-bold font-serif text-amber-900
+  .main_text {
+    @apply font-bold font-serif text-amber-900;
   }
-  .input_style{
-    @apply w-full border border-gray-300 rounded-full px-4 py-3 focus:outline-none transition-all duration-500 hover:border-amber-900
+  .input_style {
+    @apply w-full border border-gray-300 rounded-full px-4 py-3 focus:outline-none transition-all duration-500 hover:border-amber-900;
   }
-}
-
-::selection {
-  background: #9f4103;
-  color: white;
 }
