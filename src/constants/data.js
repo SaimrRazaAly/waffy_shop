@@ -176,7 +176,7 @@ export const Navbar_data = [
     children: [
       { id: 21, title: "About", link: "/pages/about-us" },
       { id: 22, title: "FAQs", link: "/pages/faqs" },
-      { id: 23, title: "Blog", link: "/blog/new" },
+      { id: 23, title: "Blog", link: "/blogs/new" },
       { id: 24, title: "Contact", link: "/pages/contact-us" },
     ],
   },
@@ -256,3 +256,81 @@ export const faqsData = [
       "Ut diam quam nulla porttitor massa id neque. Elementum eu facilisis sed odio morbi quis commodo.",
   },
 ]
+
+
+
+export const blogData = [
+  {
+    id:1 ,
+    title: "Black Pepper Powder",
+    description:
+      "Quis imperdiet massa tincidunt nunc pulvinar sapien et. Gravida quis blandit turpis cursus in hac. Fames ac turpis egestas integer eget aliquet nib...",
+    image: "/images/2.jpg",
+    link: "/blogs/1", // Example link to the blog post detail page
+  },
+  {
+    id: 2,
+    title: "Cayenne Pepper",
+    description:
+      "Cayenne pepper is a hot chili pepper that is used in many dishes to add heat and flavor. It’s also known for its health benefits, including improving metabolism...",
+    image: "/images/4.jpg",
+    link: "/blogs/2",
+  },
+  {
+    id: 3,
+    title: "Paprika Benefits",
+    description:
+      "Paprika is a popular spice used in various cuisines around the world. It is packed with vitamins and antioxidants that can support your overall health...",
+    image: "/images/5.jpg",
+    link: "/blogs/3",
+  },
+  {
+    id: 4,
+    title: "Black Pepper Powder",
+    description:
+      "Quis imperdiet massa tincidunt nunc pulvinar sapien et. Gravida quis blandit turpis cursus in hac. Fames ac turpis egestas integer eget aliquet nib...",
+    image: "/images/2.jpg",
+    link: "/blogs/1", // Example link to the blog post detail page
+  },
+  {
+    id: 5,
+    title: "Cayenne Pepper",
+    description:
+      "Cayenne pepper is a hot chili pepper that is used in many dishes to add heat and flavor. It’s also known for its health benefits, including improving metabolism...",
+    image: "/images/4.jpg",
+    link: "/blogs/8",
+  },
+  {
+    id: 6,
+    title: "Paprika Benefits",
+    description:
+      "Paprika is a popular spice used in various cuisines around the world. It is packed with vitamins and antioxidants that can support your overall health...",
+    image: "/images/5.jpg",
+    link: "/blogs/7",
+  },
+  {
+    id: 7,
+    title: "Black Pepper Powder",
+    description:
+      "Quis imperdiet massa tincidunt nunc pulvinar sapien et. Gravida quis blandit turpis cursus in hac. Fames ac turpis egestas integer eget aliquet nib...",
+    image: "/images/1.jpg",
+    link: "/blogs/8", // Example link to the blog post detail page
+  },
+  {
+    id: 2,
+    title: "Cayenne Pepper",
+    description:
+      "Cayenne pepper is a hot chili pepper that is used in many dishes to add heat and flavor. It’s also known for its health benefits, including improving metabolism...",
+    image: "/images/5.jpg",
+    link: "/blogs/2",
+  },
+  {
+    id: 3,
+    title: "Paprika Benefits",
+    description:
+      "Paprika is a popular spice used in various cuisines around the world. It is packed with vitamins and antioxidants that can support your overall health...",
+    image: "/images/4.jpg",
+    link: "/blogs/3",
+  },
+  // Add more blog data as needed
+];

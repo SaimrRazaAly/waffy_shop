@@ -65,7 +65,7 @@ const Navbar = () => {
             isSticky
               ? "lg:fixed lg:w-full lg:py-4 lg:top-0 lg:px-20 lg:left-0   lg:items-center "
               : ""
-          }  lg:flex lg:flex-row-reverse   lg:justify-between  lg:items-center  py-4 px-5 hidden lg:bg-black lg:text-white lg:w-[110%]`}
+          }  lg:flex lg:flex-row-reverse   lg:justify-between  lg:items-center  px-5 hidden py-5 lg:bg-black lg:text-white lg:w-[110%]`}
         >
           <div className="hidden lg:flex gap-2 items-center justify-center lg:gap-4">
             <CiSearch className="links_hover_Color" />
@@ -82,7 +82,7 @@ const Navbar = () => {
           <nav
             className={`hidden  ${
               isSticky ? " lg:px-4 lg:py-2  " : ""
-            }   lg:flex items-center  justify-end gap-8 mt-3 lg:text-white text-black text-[18px]`}
+            }   lg:flex items-center  justify-end gap-8 mt-3 lg:mt-0 lg:text-white text-black text-[18px]`}
           >
             {Navbar_data.map((item, i) => (
               <li key={item.id} className="relative group list-none">
