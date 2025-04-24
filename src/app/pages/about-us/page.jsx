@@ -9,6 +9,8 @@ import { FaTwitter, FaPinterest } from "react-icons/fa";
 import Image from "next/image";
 import Client_Area from "@/Components/Client_Area";
 
+let arr = [1, 2, 3, 4];
+
 const About_Page = () => {
   return (
     <>
@@ -69,41 +71,53 @@ const About_Page = () => {
             para={"In iaculis nunc sed augue lacus viverra vitae congue eu."}
           />
           {/* card */}
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
-       
-          <div className="overflow-hiddenh-full w-full md:w-max-[600px] md:h-auto">
-            <div className="relative  md:w-max-[600px] md:h-auto w-full h-full ">
-              <Image
-                src={"/images/1Client.jpg"}
-                alt="hermna"
-                fill
-                className="object-cover object-center"
-              />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {/*Loopoing through all the cards  */}
+            {arr.map((v, i) => {
+              return (
+                <div
+                  key={i}
+                  className="group overflow-hidden flex items-center flex-col justify-center relative min-h-[350px] w-full md:max-w-[600px] md:h-[350px] mt-3"
+                >
+                  <div className="relative w-full h-full">
+                    <Image
+                      src={"/images/1Client.jpg"}
+                      alt="hermna"
+                      fill
+                      className="object-cover object-center"
+                    />
 
-              <div className="absolute left-0 transtion duration  top-0 bg-[#000000c2] w-0 hover:w-[50%]" />
-              <div className="absolute left-0 transtion duration  top-0 bg-[#000000c2] w-0 hover:w-[50%]" />
-            </div>
+                    {/* Left overlay */}
+                    <div className="absolute left-0 top-0 h-full bg-[#000000c2] w-0 transition-all duration-500 group-hover:w-[50%]" />
 
-            <div className="flex ote gap-4  mb-5   ">
-              <span className="p-4 bg-white text-gray-">
-                <FaPinterest />
-              </span>
-              <span>
-                <FaTwitter />
-              </span>
-              <span>
-                <TiSocialFacebook />
-              </span>
-              <span>
-                <TfiYoutube />
-              </span>
-            </div>
-            <div>
-              <h2 className="main_text">Mila</h2>
-              <h3>Proprietor</h3>
-            </div>
-          </div>
-               
+                    {/* Right overlay */}
+                    <div className="absolute right-0 top-0 h-full bg-[#000000c2] w-0 transition-all duration-500 group-hover:w-[50%]" />
+                  </div>
+
+                  {/* Social icons container */}
+                  <div className="absolute -bottom-5 group-hover:bottom-14  flex items-center gap-4 mb-5 translate-y-[150%] opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                    <span className="p-4 bg-white text-gray-900">
+                      <FaPinterest />
+                    </span>
+                    <span className="p-4 bg-white text-gray-900">
+                      <FaTwitter />
+                    </span>
+                    <span className="p-4 bg-white text-gray-900">
+                      <TiSocialFacebook />
+                    </span>
+                    <span className="p-4 bg-white text-gray-900">
+                      <TfiYoutube />
+                    </span>
+                  </div>
+
+                  {/* Name and title */}
+                  <div className="mt-2">
+                    <h2 className="main_text text-3xl">Mila</h2>
+                    <h3>Proprietor</h3>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

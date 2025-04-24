@@ -88,7 +88,7 @@ const Navbar = () => {
         } bg-[#000000c2] h-screen overflow-y-hidden -z-10`}
       />
       <div
-        className={`fixed  top-0 right-0 h-full sm:w-[300px] w-[60%] bg-white z-50 transform transition-transform duration-700 ease-in-out ${
+        className={`fixed  top-0 right-0 h-full sm:w-[300px] w-[80%] bg-white z-50 transform transition-transform duration-700 ease-in-out ${
           click ? "translate-x-0" : "translate-x-full"
         } lg:hidden`}
       >

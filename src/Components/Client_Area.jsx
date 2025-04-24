@@ -15,7 +15,7 @@ const Client_Area = () => {
         {/* Cards will come here */}
         {Clients_data.map((v, i) => {
           return (
-            <div key={v.id}>
+            <div key={v.id} className="lg:max-w-[400px]">
               <p>
                 Fringilla est ullamcorper eget nulla facilisi etiam dignissim
                 diam. Ac felis donec et odio pellentesque diam volutpat. Justo
@@ -38,8 +38,10 @@ const Client_Area = () => {
                   alt="clients"
                   className="object-cover object-center rounded-full"
                 />
-                <h3 className="text-bold">{v.name}</h3>{" "}
-                <span>- {v.profession}</span>
+                <div className="flex items-center gap-2 flex-col sm:flex-row">
+                  <h3 className="text-bold">{v.name}</h3>{" "}
+                  <span>- {v.profession}</span>
+                </div>
               </div>
             </div>
           );
