@@ -99,6 +99,7 @@ const Navbar = () => {
                     {item.children.map((child) => (
                       <li key={child.id} className="border border-gray-200 ">
                         <Link
+                          onClick={() => setClick(true)}
                           href={child.link}
                           className="block px-4 py-2 text-sm hover:text-amber-400 text-black "
                         >
@@ -153,6 +154,7 @@ const Navbar = () => {
                   {item.children.map((child) => (
                     <li key={child.id} className="border border-gray-200 ">
                       <Link
+                      onClick={() => setClick(true)}
                         href={child.link}
                         className="block px-4 py-2 text-sm hover:text-amber-400 text-black "
                       >
