@@ -52,7 +52,10 @@ const Navbar = () => {
         <div className="lg:hidden flex gap-4 items-center justify-center lg:gap-4">
           <CiSearch className="links_hover_Color" />
           <span>USD </span>
-          <FaCartShopping className="links_hover_Color" />
+          <Link href={"/cart"}>
+            {" "}
+            <FaCartShopping className="links_hover_Color cursor-pointer" />
+          </Link>
           <Link href={"/account/login"}>
             <button className="cursor-pointer">
               <FaUser className="links_hover_Color" />
@@ -71,7 +74,10 @@ const Navbar = () => {
           <div className="hidden lg:flex gap-2 items-center justify-center lg:gap-4">
             <CiSearch className="links_hover_Color" />
             <span>USD </span>
-            <FaCartShopping className="links_hover_Color" />
+            <Link href={"/cart"}>
+              {" "}
+              <FaCartShopping className="links_hover_Color" />
+            </Link>
             <Link href={"/account/login"}>
               <button className="cursor-pointer">
                 <FaUser className="links_hover_Color" />

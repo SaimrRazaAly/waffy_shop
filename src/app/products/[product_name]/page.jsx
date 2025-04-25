@@ -8,6 +8,8 @@ import { LiaCommentsSolid } from "react-icons/lia";
 import { FaUser } from "react-icons/fa";
 import { HiCalendarDateRange } from "react-icons/hi2";
 import Border_Btn from "@/Components/Border_Btn";
+import Plus from "./Plus";
+import Link from "next/link";
 
 export async function generateMetadata({ params }) {
   let { product_name } = await params; // Get the blog slug from the URL
@@ -58,7 +60,10 @@ export default async function Indisual_Blog_Page({ params }) {
             <div className="flex items-center gap-4 mt-4 justify-center w-full">
               {arr.map((v, i) => {
                 return (
-                  <div className=" relative h-[90px] w-[60px] border-2 border-white transition-all duration-500  hover:border-amber-900">
+                  <div
+                    key={i}
+                    className=" relative h-[90px] w-[60px] border-2 border-white transition-all duration-500  hover:border-amber-900"
+                  >
                     <Image
                       src={"/images/food_1.png"}
                       alt={titleFromSlug}
@@ -93,17 +98,12 @@ export default async function Indisual_Blog_Page({ params }) {
                 <h4 className="text-amber-900 font-bold">Weight:</h4>{" "}
                 <span>250 gm</span>
               </div>
-              <div className="flex items-center justify-between ">
-                <h4 className="text-amber-900 font-bold">Quantity:</h4>{" "}
-                <div className="flex p-2 border  items-center justify-center  border-slate-200 ">
-                  <button className="border-r  border-slate-200 px-3">-</button>
-                  <p className="px-2">1</p>
-                  <button className="border-l  border-slate-200 px-3">+</button>
-                </div>
-              </div>
+              <Plus id={Food_item._id} />
             </div>
             <div className="mt-5 flex gap-3 flex-wrap items-center">
-              <Border_Btn title={"Add To cart"} />
+              <Link href={"/cart"}>
+                <Border_Btn title={"Add To cart"} />
+              </Link>
               <Border_Btn title={"Buy it now"} />
               <Border_Btn title={"View my watchlist"} />
             </div>

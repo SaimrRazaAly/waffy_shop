@@ -1,6 +1,7 @@
 import Navbar from "@/Components/Navbar";
 import "./globals.css";
 import Footer from "@/Components/Footer";
+import StoreContextProvider from "@/context/StoreContext";
 
 export const metadata = {
   title: {
@@ -13,9 +14,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="overflow-x-hidden">
-        <Navbar />
-        {children}
-        <Footer />
+        <StoreContextProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </StoreContextProvider>
       </body>
     </html>
   );

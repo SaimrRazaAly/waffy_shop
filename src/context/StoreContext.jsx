@@ -1,32 +1,24 @@
-import { createContext, useState, useEffect } from "react";
-import { food_list } from "../assets/assets";
+"use client"
+
+import { createContext, useState, useEffect } from 'react';
+import { food_list } from '@/constants/data';
 
 export const StoreContext = createContext(null);
 
-
-const StoreContextProvider = ({children}) => {
-
-
+const StoreContextProvider = ({ children }) => {
   const [cartItem, setCartItem] = useState({});
 
-  // by this function we can ADD an item in the menu section
   const AddToCart = (itemId) => {
-    if (!cartItem[itemId]) {
-      setCartItem((previous) => ({ ...previous, [itemId]: 1 }));
-    } else {
-      setCartItem((previous) => ({
-        ...previous,
-        [itemId]: previous[itemId] + 1,
-      }));
-    }
+    setCartItem((prev) => ({
+      ...prev,
+      [itemId]: (prev[itemId] || 0) + 1,
+    }));
   };
 
-  // by this function we can REMOVE an item in the menu section
-
   const RemoveFromCart = (itemId) => {
-    setCartItem((previous) => ({
-      ...previous,
-      [itemId]: previous[itemId] - 1,
+    setCartItem((prev) => ({
+      ...prev,
+      [itemId]: Math.max(0, (prev[itemId] || 0) - 1),
     }));
   };
 
@@ -34,29 +26,29 @@ const StoreContextProvider = ({children}) => {
     let totalAmount = 0;
     for (const item in cartItem) {
       if (cartItem[item] > 0) {
-        let itemInfo = food_list.find((product) =>product._id === item);
-        totalAmount += itemInfo.price * cartItem[item]
-      
+        let itemInfo = food_list.find((product) => product._id === item);
+        totalAmount += itemInfo.price * cartItem[item];
       }
     }
     return totalAmount;
   };
+
   useEffect(() => {
-    console.log(cartItem)
-  }, [getTotalCartAmount()])
+    console.log(cartItem);
+  }, [cartItem]);
 
   const contextValue = {
     food_list,
     cartItem,
-    setCartItem,
     AddToCart,
     RemoveFromCart,
     getTotalCartAmount,
   };
+
   return (
-    <StoreContext value={contextValue}>
+    <StoreContext.Provider value={contextValue}>
       {children}
-    </StoreContext > /* if any eror then .provider*/
+    </StoreContext.Provider>
   );
 };
 
