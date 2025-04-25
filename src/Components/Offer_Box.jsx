@@ -1,4 +1,5 @@
 import Image from "next/image";
+import OverLay from "./OverLay";
 
 const Offer_Box = ({ title, image }) => {
   return (
