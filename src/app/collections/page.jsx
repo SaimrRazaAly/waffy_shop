@@ -4,7 +4,7 @@ import Glowing_Btn from "@/Components/Glowing_Btn";
 import Page_Hero_Banner from "@/Components/Page_Hero_Banner";
 import Image from "next/image";
 
-const arr = [1, 2, 3, 4];
+const arr = [{}, 2, 3, 4];
 
 const Collections = () => {
   return (
