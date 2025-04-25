@@ -1,5 +1,6 @@
-import { Team_Card } from "@/Components/Cards";
+
 import Sec_Heading from "@/Components/Sec_Heading";
+import Team_Card from "@/Components/Team_Card";
 import { Team_data } from "@/constants/data";
 import React from "react";
 

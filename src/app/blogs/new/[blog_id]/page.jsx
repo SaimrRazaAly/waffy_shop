@@ -8,6 +8,19 @@ import { LiaCommentsSolid } from "react-icons/lia";
 import { FaUser } from "react-icons/fa";
 import { HiCalendarDateRange } from "react-icons/hi2";
 
+export async function generateMetadata({ params }) {
+  let { blog_id } = await params; // Get the blog slug from the URL
+  blog_id = blog_id.replace(/-/g, " ");
+  let blog = blogData.find((b) => b.title === blog_id); // Find the corresponding blog
+
+  if (!blog)
+    return { title: "Blog Not Found", description: "Page not available" };
+
+  return {
+    title: blog.title,
+  };
+}
+
 let arr = [1, 2];
 export default async function Indisual_Blog_Page({ params }) {
   const { blog_id } = await params;
@@ -24,8 +37,8 @@ export default async function Indisual_Blog_Page({ params }) {
   return (
     <>
       <Page_Hero_Banner
-        title={blog_id}
-        para={"Home / News / " + blog_id}
+        title={titleFromSlug}
+        para={"Home / News / " + titleFromSlug}
       />
       <div className="px-10 py-22 max-w-5xl mx-auto">
         <div className="relative w-full md:h-[450px] h-96 mb-5">
@@ -146,39 +159,37 @@ export default async function Indisual_Blog_Page({ params }) {
           <h2 className="main_text text-3xl mt-10">Leave a comment</h2>
           <div className="flex items-center justify-center flex-col">
             <div className="  gap-4 p-10 d w-full md:flex-row flex flex-col items-center justify-center mx-auto">
-              
-                <input
-                  type="name"
-                  placeholder="name"
-                  className="input_style_login mb-4 md:mb-0 md:mr-4"
-                  required
-                />
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className="input_style_login"
-                  required
-                />
-              </div>
-
-              <textarea
-                placeholder="Message"
-                rows="5"
+              <input
+                type="name"
+                placeholder="name"
+                className="input_style_login mb-4 md:mb-0 md:mr-4"
                 required
-                className="input_style_login !rounded-lg md:w-[90%] w-[83%] resize-none mb-8 py-4"
-              ></textarea>
+              />
+              <input
+                type="email"
+                placeholder="Email"
+                className="input_style_login"
+                required
+              />
             </div>
-            </div>
-        <div className="flex justify-end px-8 sm:px-10">
 
-            <button
-              type="submit"
-              className="  py-2 px-4 rounded-full border-2 cursor-pointer border-amber-400  hover:bg-amber-400  transition mb-8"
-              >
-              Post Comment
-            </button>
-                </div>
+            <textarea
+              placeholder="Message"
+              rows="5"
+              required
+              className="input_style_login !rounded-lg md:w-[90%] w-[83%] resize-none mb-8 py-4"
+            ></textarea>
           </div>
+        </div>
+        <div className="flex justify-end px-8 sm:px-10">
+          <button
+            type="submit"
+            className="  py-2 px-4 rounded-full border-2 cursor-pointer border-amber-400  hover:bg-amber-400  transition mb-8"
+          >
+            Post Comment
+          </button>
+        </div>
+      </div>
     </>
   );
 }

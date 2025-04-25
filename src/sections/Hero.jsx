@@ -54,11 +54,11 @@ export default function Carousel() {
               <div className="absolute inset-0 bg-black opacity-50"></div>
 
               {/* Text Content */}
-              <div className="absolute top-[59%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white z-10">
-                <h2 className="sm:text-5xl  text-2xl mt-10 font-serif italic font-semibold">
+              <div className="absolute w-[70%] sm:w-auto  top-[59%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white z-10">
+                <h2 className="sm:text-5xl   text-[30px] mt-10 font-serif italic font-semibold">
                   {slide.heading}
                 </h2>
-                <h3 className="sm:text-4xl text-[20px] mt-4 text-yellow-500 border-t border-red-500 border-b py-2">
+                <h3 className="sm:text-4xl  text-[26px]  mt-4 text-yellow-500 border-t border-red-500 border-b py-2">
                   {slide.subheading}
                 </h3>
                 <h3 className="sm:text-2xl  text-bold text-[17px] mt-2 text-yellow-500">
@@ -75,14 +75,14 @@ export default function Carousel() {
         onClick={() => scrollCarousel(-1)}
         aria-label="Previous Slide"
       >
-      <GrLinkPrevious/>
+        <GrLinkPrevious />
       </button>
       <button
         className="absolute top-1/2 right-2 transform -translate-y-1/2 sm:p-3 p-1 bg-gray-700 bg-opacity-50 rounded-full text-white hover:bg-opacity-75 focus:outline-none"
         onClick={() => scrollCarousel(1)}
         aria-label="Next Slide"
-        >
-          <GrLinkNext/>
+      >
+        <GrLinkNext />
       </button>
     </section>
   );

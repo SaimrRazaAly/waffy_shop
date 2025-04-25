@@ -3,6 +3,12 @@ import Page_Hero_Banner from "@/Components/Page_Hero_Banner";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
+export const Metadata = {
+  title: {
+    absolute: "Account",
+  },
+};
+
 const Login = () => {
   const router = useRouter();
   const [email, setEmail] = useState("");

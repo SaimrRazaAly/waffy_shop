@@ -1,8 +1,8 @@
 import Offer_Box from "@/Components/Offer_Box";
+import OverLay from "@/Components/OverLay";
 import { Offer_data, images } from "@/constants/data";
 import Image from "next/image";
 import React from "react";
-import { OverLay } from "@/Components/Offer_Box";
 
 const Offers = ({row}) => {
   return (
