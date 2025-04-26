@@ -5,56 +5,74 @@ import { Items_data } from "@/constants/data";
 const Image_Gallery = () => {
   return (
     <div className="flex flex-col xl:flex-row gap-3">
-
-      <div className="flex flex-col gap-5 xl:flex-row border border-red-600 xl:w-[65%] ">
+      <div className="flex flex-col gap-1 xl:gap-5 xl:flex-row border border-red-600 xl:w-[65%] ">
         <div className="relative w-full h-[400px] xl:h-[600px] xl:w-[70%] ">
           <Image
             src={"/images/2.jpg"}
             alt="This"
             fill
             className="object-center object-cover"
-            />
+          />
         </div>
-       <div className="flex flex-col gap-1">
-          <div className="relative md:w-[250px] md:h-[300px]  w-full h-[400px]">
-            <Image
-              src={"/images/2.jpg"}
-              alt="This"
-              fill
-              className="object-center object-cover"
+
+        <div className="md:flex gap-5 xl:block block md:items-center md:justify-center  h-[400px] ">
+        <div className="flex flex-col md:flex-row xl:flex-col md:gap-3 xl:gap-1 gap-1">
+            <div className="relative md:w-[200px] md:h-[300px]  w-full h-[400px]">
+              <Image
+                src={"/images/2.jpg"}
+                alt="This"
+                fill
+                className="object-center object-cover"
               />
-          </div>
-          <div className="relative md:w-[250px] md:h-[300px]  w-full h-[400px]">
-            <Image
-              src={"/images/2.jpg"}
-              alt="This"
-              fill
-              className="object-center object-cover"
+            </div>
+            <div className="relative md:w-[200px] md:h-[300px]  w-full h-[400px]">
+              <Image
+                src={"/images/2.jpg"}
+                alt="This"
+                fill
+                className="object-center object-cover"
               />
+            </div>
           </div>
-        </div> 
+
+          <div className="md:flex  items-center justify-center xl:flex-col gap-1 xl:hidden hidden  md:gap-3 xl:gap-1 ">
+            <div className="relative md:w-[190px] md:h-[300px]  w-full h-[400px]">
+              <Image
+                src={"/images/2.jpg"}
+                alt="This"
+                fill
+                className="object-center object-cover"
+              />
+            </div>
+            <div className="relative md:w-[170px] md:h-[300px]  w-full h-[400px]">
+              <Image
+                src={"/images/2.jpg"}
+                alt="This"
+                fill
+                className="object-center object-cover"
+              />
+            </div>
+          </div>
+        </div>
       </div>
 
-
- 
-
-      <div className="flex flex-col gap-5 xl:flex-row border border-red-600 xl:w-[50%] ">
-        <div className="relative w-full h-[400px] xl:h-[600px] xl:w-[50%] ">
+      <div className="flex flex-col gap-1 xl:gap-5  md:flex-row border border-red-600 xl:w-[50%] md:hidden xl:flex ">
+        <div className="relative w-full  md:h-[600px] h-[400px] xl:h-[600px] xl:w-[50%] md:w-[30%] ">
           <Image
             src={"/images/2.jpg"}
             alt="This"
             fill
             className="object-center object-cover"
-            />
+          />
         </div>
-       <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1">
           <div className="relative md:w-[250px] md:h-[300px]  w-full h-[400px]">
             <Image
               src={"/images/2.jpg"}
               alt="This"
               fill
               className="object-center object-cover"
-              />
+            />
           </div>
           <div className="relative md:w-[250px] md:h-[300px]  w-full h-[400px]">
             <Image
@@ -62,14 +80,11 @@ const Image_Gallery = () => {
               alt="This"
               fill
               className="object-center object-cover"
-              />
+            />
           </div>
-        </div> 
+        </div>
       </div>
-
-
- 
-     </div>
+    </div>
   );
 };
 
