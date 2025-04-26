@@ -657,16 +657,6 @@ export const food_list = [
   },
 ];
 
-
-
-
-
-
-
-
-
-
-
 export const collections_data = [
   {
     id: 1,

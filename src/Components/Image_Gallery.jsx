@@ -52,7 +52,7 @@ const HoverCard = ({ extraClass }) => {
 
       {/* Hover Overlay (Left Side) */}
       <div
-        className="absolute inset-0 bg-black/70 group-hover:w-[100%] w-F0 top-0 left-1/2 transform 
+        className="absolute inset-0 bg-black/70 group-hover:w-[100%] w-0 top-0 left-1/2 transform 
       -translate-x-1/2 flex justify-center items-center text-white transition-all duration-500 ease-in-out"
       />
 
