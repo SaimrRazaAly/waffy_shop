@@ -656,3 +656,40 @@ export const food_list = [
     category: "Noodles",
   },
 ];
+
+
+
+
+
+
+
+
+
+
+
+export const collections_data = [
+  {
+    id: 1,
+    name: "Spices",
+    image: food_10,
+    link: "/collections/spices",
+  },
+  {
+    id: 2,
+    name: "Dry Fruits",
+    image: food_26,
+    link: "/collections/roaster-seeds",
+  },
+  {
+    id: 3,
+    name: "Roaster Seeds",
+    image: food_2,
+    link: "/collections/dried-masalas",
+  },
+  {
+    id: 4,
+    name: "Herbs",
+    image: food_11,
+    link: "/collections/all",
+  },
+];

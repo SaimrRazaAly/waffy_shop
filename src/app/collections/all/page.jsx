@@ -11,7 +11,7 @@ const Shop_Page = () => {
     <>
       <Page_Hero_Banner title={" Collection"} />
 
-      <div className="py-10 md:py-20 px-14">
+      <div className="py-10 md:py-5 px-14">
         <div className="mx-auto md:gap-5 gap-3 flex items-center justify-center flex-wrap px-5 py-20">
           {food_list.map((v, i) => {
             return (
