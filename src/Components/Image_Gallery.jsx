@@ -4,47 +4,100 @@ import { Items_data } from "@/constants/data";
 
 const Image_Gallery = () => {
   return (
-    <div className="flex xl:flex-row my-20 flex-col gap-5 items-center justify-center md:px-5 overflow-hidden ">
-      {Items_data.map((v, i) => {
-        return (
-          <Image_Gallery_Card
-            title={v.title}
-            i={i}
-            image={v.image}
-            key={v.id}
-            desc={v.description}
-          />
-        );
-      })}
-    </div>
+    <div className="flex flex-col xl:flex-row gap-3">
+
+      <div className="flex flex-col gap-5 xl:flex-row border border-red-600 xl:w-[65%] ">
+        <div className="relative w-full h-[400px] xl:h-[600px] xl:w-[70%] ">
+          <Image
+            src={"/images/2.jpg"}
+            alt="This"
+            fill
+            className="object-center object-cover"
+            />
+        </div>
+       <div className="flex flex-col gap-1">
+          <div className="relative md:w-[250px] md:h-[300px]  w-full h-[400px]">
+            <Image
+              src={"/images/2.jpg"}
+              alt="This"
+              fill
+              className="object-center object-cover"
+              />
+          </div>
+          <div className="relative md:w-[250px] md:h-[300px]  w-full h-[400px]">
+            <Image
+              src={"/images/2.jpg"}
+              alt="This"
+              fill
+              className="object-center object-cover"
+              />
+          </div>
+        </div> 
+      </div>
+
+
+ 
+
+      <div className="flex flex-col gap-5 xl:flex-row border border-red-600 xl:w-[50%] ">
+        <div className="relative w-full h-[400px] xl:h-[600px] xl:w-[50%] ">
+          <Image
+            src={"/images/2.jpg"}
+            alt="This"
+            fill
+            className="object-center object-cover"
+            />
+        </div>
+       <div className="flex flex-col gap-1">
+          <div className="relative md:w-[250px] md:h-[300px]  w-full h-[400px]">
+            <Image
+              src={"/images/2.jpg"}
+              alt="This"
+              fill
+              className="object-center object-cover"
+              />
+          </div>
+          <div className="relative md:w-[250px] md:h-[300px]  w-full h-[400px]">
+            <Image
+              src={"/images/2.jpg"}
+              alt="This"
+              fill
+              className="object-center object-cover"
+              />
+          </div>
+        </div> 
+      </div>
+
+
+ 
+     </div>
   );
 };
 
 export default Image_Gallery;
 
-// =================== Card Component ================================
-export const Image_Gallery_Card = ({ image, title, desc, i }) => {
-  return (
-    <div className="relative transition-all duration-500  w-full h-[300px] hover:scale-110  group overflow-hidden border border-amber-400">
-     <div
-  className={`relative w-full h-[300px] xl:w-[200px] ${
-    i === 0 ? "xl:h-[660px]" : "xl:h-[300px]"
-  }`}
->
-        <Image
-          src={image}
-          fill
-          alt="dome"
-          className="object-center object-cover "
-        />
-      </div>
+// // =================== Card Component ================================
+// export const Image_Gallery_Card = ({ image, title, desc, i }) => {
+//   return (
+//     <div className="relative transition-all duration-500  w-full h-[300px] hover:scale-110  group overflow-hidden border border-amber-400">
+//      <div
+//   className={`relative w-full h-[300px] xl:w-[200px] ${
+//     i === 0 ? "xl:h-[660px]" : "xl:h-[300px]"
+//   }`}
+// >
+//         <Image
+//           src={image}
+//           fill
+//           alt="dome"
+//           className="object-center object-cover "
+//         />
+//       </div>
 
-      {/* Hover Overlay */}
-      <div className="absolute w-full inset-0 bg-[#000000c2] flex-col text-white gap-5 flex items-center justify-center opacity-0 scale-90 group-hover:opacity-100 group-hover:scale-100 transition-all duration-500 ease-in-out">
-        <h2 className="font-bold font-serif text-2xl">{title}</h2>
-        <p className="text-amber-400">{desc}</p>
-        <Border_Btn title={"View Collection"} />
-      </div>
-    </div>
-  );
-};
+//       {/* Hover Overlay */}
+//       <div className="absolute w-full inset-0 bg-[#000000c2] flex-col text-white gap-5 flex items-center justify-center opacity-0 scale-90 group-hover:opacity-100 group-hover:scale-100 transition-all duration-500 ease-in-out">
+//         <h2 className="font-bold font-serif text-2xl">{title}</h2>
+//         <p className="text-amber-400">{desc}</p>
+//         <Border_Btn title={"View Collection"} />
+//       </div>
+//     </div>
+//   );
+// };
