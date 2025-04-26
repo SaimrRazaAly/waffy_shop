@@ -5,83 +5,32 @@ import { Items_data } from "@/constants/data";
 const Image_Gallery = () => {
   return (
     <div className="flex flex-col xl:flex-row gap-3">
-      <div className="flex flex-col gap-1 xl:gap-5 xl:flex-row border border-red-600 xl:w-[65%] ">
-        <div className="relative w-full h-[400px] xl:h-[600px] xl:w-[70%] ">
-          <Image
-            src={"/images/2.jpg"}
-            alt="This"
-            fill
-            className="object-center object-cover"
-          />
-        </div>
+      {/* Left Section */}
+      <div className="flex flex-col gap-1 xl:gap-5 xl:flex-row xl:w-[65%]">
+        {/* Big Image */}
+        <HoverCard extraClass="w-full h-[400px] xl:h-[600px] xl:w-[70%]" />
 
-        <div className="md:flex gap-5 xl:block block md:items-center md:justify-center  h-[400px] ">
-        <div className="flex flex-col md:flex-row xl:flex-col md:gap-3 xl:gap-1 gap-1">
-            <div className="relative md:w-[200px] md:h-[300px]  w-full h-[400px]">
-              <Image
-                src={"/images/2.jpg"}
-                alt="This"
-                fill
-                className="object-center object-cover"
-              />
-            </div>
-            <div className="relative md:w-[200px] md:h-[300px]  w-full h-[400px]">
-              <Image
-                src={"/images/2.jpg"}
-                alt="This"
-                fill
-                className="object-center object-cover"
-              />
-            </div>
+        {/* Small Images */}
+        <div className="md:flex gap-5 xl:block block md:items-center md:justify-center h-[400px]">
+          <div className="flex flex-col md:flex-row xl:flex-col md:gap-3 xl:gap-1 gap-1">
+            <HoverCard extraClass="md:w-[200px] md:h-[300px] w-full h-[400px]" />
+            <HoverCard extraClass="md:w-[200px] md:h-[300px] w-full h-[400px]" />
           </div>
 
-          <div className="md:flex  items-center justify-center xl:flex-col gap-1 xl:hidden hidden  md:gap-3 xl:gap-1 ">
-            <div className="relative md:w-[190px] md:h-[300px]  w-full h-[400px]">
-              <Image
-                src={"/images/2.jpg"}
-                alt="This"
-                fill
-                className="object-center object-cover"
-              />
-            </div>
-            <div className="relative md:w-[170px] md:h-[300px]  w-full h-[400px]">
-              <Image
-                src={"/images/2.jpg"}
-                alt="This"
-                fill
-                className="object-center object-cover"
-              />
-            </div>
+          <div className="md:flex items-center justify-center xl:flex-col gap-1 xl:hidden hidden md:gap-3 xl:gap-1">
+            <HoverCard extraClass="md:w-[190px] md:h-[300px] w-full h-[400px]" />
+            <HoverCard extraClass="md:w-[170px] md:h-[300px] w-full h-[400px]" />
           </div>
         </div>
       </div>
 
-      <div className="flex flex-col gap-1 xl:gap-5  md:flex-row border border-red-600 xl:w-[50%] md:hidden xl:flex ">
-        <div className="relative w-full  md:h-[600px] h-[400px] xl:h-[600px] xl:w-[50%] md:w-[30%] ">
-          <Image
-            src={"/images/2.jpg"}
-            alt="This"
-            fill
-            className="object-center object-cover"
-          />
-        </div>
+      {/* Right Section */}
+      <div className="flex flex-col gap-1 xl:gap-5 md:flex-row  xl:w-[50%] md:hidden xl:flex">
+        <HoverCard extraClass="w-full md:h-[600px] h-[400px] xl:h-[600px] xl:w-[50%] md:w-[30%]" />
+
         <div className="flex flex-col gap-1">
-          <div className="relative md:w-[250px] md:h-[300px]  w-full h-[400px]">
-            <Image
-              src={"/images/2.jpg"}
-              alt="This"
-              fill
-              className="object-center object-cover"
-            />
-          </div>
-          <div className="relative md:w-[250px] md:h-[300px]  w-full h-[400px]">
-            <Image
-              src={"/images/2.jpg"}
-              alt="This"
-              fill
-              className="object-center object-cover"
-            />
-          </div>
+          <HoverCard extraClass="md:w-[250px] md:h-[300px] w-full h-[400px]" />
+          <HoverCard extraClass="md:w-[250px] md:h-[300px] w-full h-[400px]" />
         </div>
       </div>
     </div>
@@ -90,29 +39,33 @@ const Image_Gallery = () => {
 
 export default Image_Gallery;
 
-// // =================== Card Component ================================
-// export const Image_Gallery_Card = ({ image, title, desc, i }) => {
-//   return (
-//     <div className="relative transition-all duration-500  w-full h-[300px] hover:scale-110  group overflow-hidden border border-amber-400">
-//      <div
-//   className={`relative w-full h-[300px] xl:w-[200px] ${
-//     i === 0 ? "xl:h-[660px]" : "xl:h-[300px]"
-//   }`}
-// >
-//         <Image
-//           src={image}
-//           fill
-//           alt="dome"
-//           className="object-center object-cover "
-//         />
-//       </div>
+// ========== HoverCard component ==========
+const HoverCard = ({ extraClass }) => {
+  return (
+    <div className={`relative group overflow-hidden  ${extraClass}`}>
+      <Image
+        src={"/images/2.jpg"}
+        alt="This"
+        fill
+        className="object-cover object-center transition-all duration-500 group-hover:scale-110"
+      />
 
-//       {/* Hover Overlay */}
-//       <div className="absolute w-full inset-0 bg-[#000000c2] flex-col text-white gap-5 flex items-center justify-center opacity-0 scale-90 group-hover:opacity-100 group-hover:scale-100 transition-all duration-500 ease-in-out">
-//         <h2 className="font-bold font-serif text-2xl">{title}</h2>
-//         <p className="text-amber-400">{desc}</p>
-//         <Border_Btn title={"View Collection"} />
-//       </div>
-//     </div>
-//   );
-// };
+      {/* Hover Overlay (Left Side) */}
+      <div
+        className="absolute inset-0 bg-black/70 group-hover:w-[100%] w-F0 top-0 left-1/2 transform 
+      -translate-x-1/2 flex justify-center items-center text-white transition-all duration-500 ease-in-out"
+      />
+
+      {/* Text and Button */}
+      <div className="absolute inset-0 bg-transparent opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center text-white transition-all duration-500 ease-in-out">
+        <div className="transform translate-y-10 group-hover:translate-y-0 transition-all duration-500 ease-in-out text-center">
+          <h2 className="text-2xl font-bold mb-2">Title Here</h2>
+          <p className="text-sm mb-4 text-amber-400">
+            Subtitle or small description
+          </p>
+          <Border_Btn title="Learn More" />
+        </div>
+      </div>
+    </div>
+  );
+};
