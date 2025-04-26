@@ -1,12 +1,16 @@
-"use client"
+"use client";
 
-import { createContext, useState, useEffect } from 'react';
-import { food_list } from '@/constants/data';
+import { createContext, useState, useEffect } from "react";
+import { food_list } from "@/constants/data";
 
 export const StoreContext = createContext(null);
 
 const StoreContextProvider = ({ children }) => {
   const [cartItem, setCartItem] = useState({});
+
+  const reset = (itemid) => {
+    setCartItem((prev) => ({ ...prev, [itemid]: 0 }));
+  };
 
   const AddToCart = (itemId) => {
     setCartItem((prev) => ({
@@ -43,6 +47,7 @@ const StoreContextProvider = ({ children }) => {
     AddToCart,
     RemoveFromCart,
     getTotalCartAmount,
+    reset,
   };
 
   return (
