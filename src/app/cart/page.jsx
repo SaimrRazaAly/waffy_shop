@@ -3,9 +3,11 @@
 import { useContext } from "react";
 import { StoreContext } from "@/context/StoreContext";
 import { food_list } from "@/constants/data"; // Assuming you have a food list with item details
+import Image from "next/image";
 
 const CartInfo = () => {
-  const { cartItem, getTotalCartAmount, RemoveFromCart } = useContext(StoreContext);
+  const { cartItem, getTotalCartAmount, RemoveFromCart } =
+    useContext(StoreContext);
 
   // Calculate total number of items in the cart
   const totalItems = Object.values(cartItem).reduce((acc, qty) => acc + qty, 0);
@@ -30,7 +32,17 @@ const CartInfo = () => {
                 className="cart-items-title cart-items-item grid grid-cols-6 gap-4 items-center text-gray-800 my-3 p-3 border-b"
                 key={index}
               >
-                <img src={v.image} alt="" className="w-12 h-12 object-cover rounded-md" />
+                <div>
+                  <div className="relative w-12 h-12">
+
+                  <Image
+                    src={v.image}
+                    alt={v.name}
+                    fill
+                    className=" object-cover rounded-md"
+                    />
+                    </div>
+                </div>
                 <p className="text-lg font-semibold">{v.name}</p>
                 <p className="text-lg">${v.price}</p>
                 <p className="text-lg">{cartItem[v._id]}</p>
@@ -70,7 +82,6 @@ const CartInfo = () => {
             PROCEED TO CHECKOUT
           </button>
         </div>
-
       </div>
     </div>
   );
