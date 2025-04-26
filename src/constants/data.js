@@ -198,13 +198,22 @@ export const Items_data = [
 
 export const Navbar_data = [
   { id: 1, title: "Home", link: "/" },
-  { id: 3, title: "Gourmet Foods", link: "/collections" },
-  { id: 4, title: "Shop", link: "/collections/all" },
-  { id: 5, title: "Grocery", link: "/collections/roaster-seeds" },
-  { id: 6, title: "Cooking Oil", link: "/collections/dried-masalas" },
-  { id: 7, title: "Beverages", link: "/collections/spicy-seeds" },
   {
-    id: 8,
+    id: 2,
+    title: "Govrmount Foods ",
+    link: "#",
+    children: [
+      { id: 26, title: "Haleem", price:289, img: food_1, link: "/collections/all" },
+      { id: 27, title: "Baberry", price:359, img: food_2, link: "/collections/all" },
+      { id: 28, title: "Biryani",  price:353,img: food_3, link: "/collections/all" },
+    ],
+  },
+  { id: 3, title: "Shop", link: "/collections/all" },
+  { id: 4, title: "Grocery", link: "/collections/roaster-seeds" },
+  { id: 5, title: "Cooking Oil", link: "/collections/dried-masalas" },
+  { id: 6, title: "Beverages", link: "/collections/spicy-seeds" },
+  {
+    id: 7,
     title: "Pages",
     link: "#",
     children: [

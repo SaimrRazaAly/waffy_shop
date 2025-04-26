@@ -102,20 +102,40 @@ const Navbar = () => {
                 </Link>
 
                 {item.children && (
-                  <ul className="absolute overflow-hidden opacity-0 group-hover:opacity-100 focus:block bg-white border shadow-md mt-1 transition-all duration-500  z-10 w-44">
-                    {item.children.map((child) => (
-                      <li key={child.id} className="border border-gray-200 ">
+                <ul className={`absolute overflow-hidden ${item.children.length === 3 ?  "flex gap-4 w-[760px]": "w-44"} opacity-0 group-hover:opacity-100 focus:block bg-white mt-3 transition-all duration-500 scale-105 z-10 `}>
+                  {item.children.map((child, i) =>
+                    child.price ? (
+                      <li
+                        key={i}
+                        className="flex flex-col gap-4 border border-gray-200 p-2"
+                      >
+                        <div className="border">
+                          <Image
+                            src={child.img}
+                            width={250}
+                            height={250}
+                            alt="this"
+                          />
+                        </div>
+                        <div className="flex items-center justify-between bg-amber-900 px-4 py-2">
+                          <h4>{child.title}</h4>
+                          <span>{child.price}</span>
+                        </div>
+                      </li>
+                    ) : (
+                      <li key={child.id} className="border border-gray-200">
                         <Link
                           onClick={() => setClick(true)}
                           href={child.link}
-                          className="block px-4 py-2 text-sm hover:text-amber-400 text-black "
+                          className="block px-4 py-2 text-sm hover:text-amber-400 text-black"
                         >
                           {child.title}
                         </Link>
                       </li>
-                    ))}
-                  </ul>
-                )}
+                    )
+                  )}
+                </ul>
+              )}
               </li>
             ))}
           </nav>
@@ -123,12 +143,12 @@ const Navbar = () => {
       </div>
       {/* Mobile Slide-In Menu */}
       <div
-        className={`fixed top-0 right-0 transition-all lg:w-0 duration-500 ease-in-out ${
+        className={`fixed top-0 right-0  transition-all lg:w-0 duration-500 ease-in-out ${
           click ? "w-screen" : "w-0"
         } bg-[#000000c2] h-screen overflow-y-hidden -z-10`}
       />
       <div
-        className={`fixed  top-0 right-0 h-full sm:w-[300px] w-[80%] bg-white z-50 transform transition-transform duration-700 ease-in-out ${
+        className={`fixed  top-0 right-0 h-full overflow-y-auto sm:w-[300px] w-[80%] bg-white z-50 transform transition-transform duration-700 ease-in-out ${
           click ? "translate-x-0" : "translate-x-full"
         } lg:hidden`}
       >
@@ -157,18 +177,38 @@ const Navbar = () => {
               </Link>
 
               {item.children && (
-                <ul className="absolute overflow-hidden opacity-0 group-hover:opacity-100 focus:block bg-white   mt-3 transition-all duration-500 scale-105  z-10 w-44">
-                  {item.children.map((child) => (
-                    <li key={child.id} className="border border-gray-200 ">
-                      <Link
-                        onClick={() => setClick(true)}
-                        href={child.link}
-                        className="block px-4 py-2 text-sm hover:text-amber-400 text-black "
+                <ul className={`overflow-hidden ${item.children.length === 3 ?  "flex flex-col gap-4 h-0 group-hover:h-auto ": "absolute  w-44"} opacity-0 group-hover:opacity-100 focus:block bg-white mt-3 transition-all duration-500 scale-105 z-10 `}>
+                  {item.children.map((child, i) =>
+                    child.price ? (
+                      <li
+                        key={i}
+                        className="flex flex-col gap-4 border border-gray-200 p-2"
                       >
-                        {child.title}
-                      </Link>
-                    </li>
-                  ))}
+                        <div className="border">
+                          <Image
+                            src={child.img}
+                            width={200}
+                            height={500}
+                            alt="this"
+                          />
+                        </div>
+                        <div className="flex items-center justify-between bg-amber-900 px-4 py-2">
+                          <h4>{child.title}</h4>
+                          <span>{child.price}</span>
+                        </div>
+                      </li>
+                    ) : (
+                      <li key={child.id} className="border border-gray-200">
+                        <Link
+                          onClick={() => setClick(true)}
+                          href={child.link}
+                          className="block px-4 py-2 text-sm hover:text-amber-400 text-black"
+                        >
+                          {child.title}
+                        </Link>
+                      </li>
+                    )
+                  )}
                 </ul>
               )}
             </li>

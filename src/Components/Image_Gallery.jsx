@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Border_Btn from "./Border_Btn";
 import { Items_data } from "@/constants/data";
+import Link from "next/link";
 
 const Image_Gallery = () => {
   return (
@@ -63,7 +64,9 @@ const HoverCard = ({ extraClass }) => {
           <p className="text-sm mb-4 text-amber-400">
             Subtitle or small description
           </p>
+          <Link href={"/collections/all"}>
           <Border_Btn title="Learn More" />
+          </Link>
         </div>
       </div>
     </div>
