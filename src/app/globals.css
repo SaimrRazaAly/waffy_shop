@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+li {
+  list-style: none;
+}
+
 @keyframes swing {
   0% {
     transform: rotate(0deg);
@@ -59,7 +63,26 @@
   .new_Post {
     @apply border border-slate-100 px-4 py-2 hover:bg-amber-400 transition-all duration-500 cursor-pointer;
   }
-  .input_style_login{
-    @apply w-full px-4 py-3 rounded-full bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-600
+  .input_style_login {
+    @apply w-full px-4 py-3 rounded-full  bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-600;
   }
+  .primary_Font {
+  }
+}
+
+/* ======================= CONFIGURAIONS ========================= */
+
+@theme {
+  --color-light-white: #ffffff;
+  --font-main: var(--font_Spicy_Rice);
+  --font-primary: var(--font-Roboto);
+  --breakpoint-*: initial;
+  --breakpoint-tlg: 1200px;
+  /* default one */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-2xmd: 960px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
 }

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Image_Gallery = () => {
   return (
-    <div className="flex flex-col xl:flex-row gap-3">
+    <div className="flex flex-col xl:flex-row gap-3 mt-14">
       {/* Left Section */}
       <div className="flex flex-col gap-1 xl:gap-5 xl:flex-row xl:w-[65%]">
         {/* Big Image */}

@@ -57,19 +57,29 @@ export const products = [
 ];
 
 export const Team_data = [
-  { id: 1, title: "ali", profession: "Develper", image: "/images/1Client.jpg" },
-  { id: 2, title: "H2", profession: "Develper", image: "/images/1Client.jpg" },
+  {
+    id: 1,
+    title: "Ethelyn Hilaire",
+    profession: "CEO",
+    image: "/images/1team.jpg",
+  },
+  {
+    id: 2,
+    title: "Timmy Bard",
+    profession: "Product Manager",
+    image: "/images/2team.jpg",
+  },
   {
     id: 3,
-    title: "asdjflkasf",
-    profession: "Develper",
+    title: "Willie Hagel",
+    profession: "Costumer Support",
     image: "/images/1Client.jpg",
   },
   {
     id: 4,
-    title: "Bad Seeds",
-    profession: "Develper",
-    image: "/images/1Client.jpg",
+    title: "Soraya Rolston",
+    profession: "Manager",
+    image: "/images/4team.jpg",
   },
 ];
 
@@ -203,9 +213,27 @@ export const Navbar_data = [
     title: "Govrmount Foods ",
     link: "#",
     children: [
-      { id: 26, title: "Haleem", price:289, img: food_1, link: "/collections/all" },
-      { id: 27, title: "Baberry", price:359, img: food_2, link: "/collections/all" },
-      { id: 28, title: "Biryani",  price:353,img: food_3, link: "/collections/all" },
+      {
+        id: 26,
+        title: "Haleem",
+        price: 289,
+        img: food_1,
+        link: "/collections/all",
+      },
+      {
+        id: 27,
+        title: "Baberry",
+        price: 359,
+        img: food_2,
+        link: "/collections/all",
+      },
+      {
+        id: 28,
+        title: "Biryani",
+        price: 353,
+        img: food_3,
+        link: "/collections/all",
+      },
     ],
   },
   { id: 3, title: "Shop", link: "/collections/all" },
@@ -690,5 +718,42 @@ export const collections_data = [
     name: "Herbs",
     image: food_11,
     link: "/collections/all",
+  },
+];
+
+import { TiSocialFacebook } from "react-icons/ti";
+import { FaTwitter, FaPinterest } from "react-icons/fa";
+import { TfiYoutube } from "react-icons/tfi";
+
+export const Team_icons_data = [
+  // SocialIconsData.tsx
+
+  {
+    id: 1,
+    href: "#",
+    icon: (
+      <TiSocialFacebook className="w-[17.72px] h-[16px] scale-125 transition-all duration-500 hover:text-amber-900" />
+    ),
+  },
+  {
+    id: 2,
+    href: "#",
+    icon: (
+      <FaTwitter className="w-[13.72px] h-[16px] transition-all duration-500 hover:text-amber-900" />
+    ),
+  },
+  {
+    id: 3,
+    href: "#",
+    icon: (
+      <FaPinterest className="w-[13.72px] h-[16px] transition-all duration-500 hover:text-amber-900" />
+    ),
+  },
+  {
+    id: 4,
+    href: "#",
+    icon: (
+      <TfiYoutube className="w-[13.72px] h-[16px] transition-all duration-500 hover:text-amber-900" />
+    ),
   },
 ];

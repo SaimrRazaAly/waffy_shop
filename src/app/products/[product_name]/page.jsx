@@ -10,6 +10,7 @@ import { HiCalendarDateRange } from "react-icons/hi2";
 import Border_Btn from "@/Components/Border_Btn";
 import Plus from "./Plus";
 import Link from "next/link";
+import { Suspense } from "react";
 
 export async function generateMetadata({ params }) {
   let { product_name } = await params; // Get the blog slug from the URL
@@ -113,3 +114,31 @@ export default async function Indisual_Blog_Page({ params }) {
     </>
   );
 }
+
+
+
+
+const getUserInfo = () =>{
+return new Promise.resolve(setTimeout(() => {
+  return {
+    "name": "John Doe",
+    "age": 30,
+    "location": "New York"
+  }
+}, 2000))
+}
+
+const app =  ()=>{
+  const userdata = use(getUserInfo())
+  return(
+    <>
+<h1>User Data is here</h1>
+<Suspense fallback={<h1>Lodaing///</h1>}>
+  <h1>{userdata.name}</h1>
+  <h1>{userdata.age}</h1>
+  <h1>{userdata.location}</h1>
+</Suspense>
+    </>
+  )
+}
+

@@ -100,7 +100,7 @@ const Navbar = () => {
                 >
                   {item.children ? item.title + " ↓" : item.title}
                 </Link>
-
+{/* 
                 {item.children && (
                 <ul className={`absolute overflow-hidden ${item.children.length === 3 ?  "flex gap-4 w-[760px]": "w-44"} opacity-0 group-hover:opacity-100 focus:block bg-white mt-3 transition-all duration-500 scale-105 z-10 `}>
                   {item.children.map((child, i) =>
@@ -135,7 +135,7 @@ const Navbar = () => {
                     )
                   )}
                 </ul>
-              )}
+              )} */}
               </li>
             ))}
           </nav>
@@ -176,7 +176,7 @@ const Navbar = () => {
                 {item.children ? item.title + " ↓" : item.title}
               </Link>
 
-              {item.children && (
+              {/* {item.children && (
                 <ul className={`overflow-hidden ${item.children.length === 3 ?  "flex flex-col gap-4 h-0 group-hover:h-auto ": "absolute  w-44"} opacity-0 group-hover:opacity-100 focus:block bg-white mt-3 transition-all duration-500 scale-105 z-10 `}>
                   {item.children.map((child, i) =>
                     child.price ? (
@@ -210,7 +210,7 @@ const Navbar = () => {
                     )
                   )}
                 </ul>
-              )}
+              )} */}
             </li>
           ))}
         </ul>

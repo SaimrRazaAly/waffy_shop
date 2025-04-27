@@ -7,14 +7,13 @@ import React from "react";
 const Team = () => {
   return (
     <section
-      className="py-5
-     md:py-10 md:px-4 px-2"
+      className="pt-[100px] pb-[70px] md:px-[70px] "
     >
       <Sec_Heading
         title={"Our Team"}
         para={"Lacus vestibulum sed arcu non sit eru racdi odio euismod."}
       />
-      <div className="flex gap-4 mt-10 justify-center items-center flex-wrap mx-auto">
+      <div className="grid 2xmd:mx-[2%] grid-cols-1 gap-[30px] md:grid-cols-2  tlg:mx-[84px] lg:mx-[119px] tlg:grid-cols-4  md:px-0 px-[30px]">
         {Team_data.map((v, i) => {
           return (
             <Team_Card
