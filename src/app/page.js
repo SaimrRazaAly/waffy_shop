@@ -10,14 +10,15 @@ import Services from "@/sections/services";
 import Team from "@/sections/Team";
 
 const Home = () => {
-
   return (
     <>
       <Hero />
       <Products />
       <Banner banner1={true} />/
-      <Offers row={"row"} />
-      <Offers row={"row-reverse"} />
+      <div className="flex flex-col items-center">
+        <Offers row={"row"} />
+        <Offers row={"row-reverse"} />
+      </div>
       <Banner />
       <Team />
       <Image_Gallery />

@@ -7,7 +7,7 @@ import React from "react";
 
 const Products = () => {
   return (
-    <section>
+    <section className="pb-[90px]">
       <div className="flex items-center justify-center flex-col gap-5 ">
         <Sec_Heading
           title={"Best Products"}
@@ -16,9 +16,17 @@ const Products = () => {
           }
         />
         {/*  heading Btn */}
-        <div className="flex gap-5">
-          <Glowing_Btn title={"Dried Seeds"} />
-          <Border_Btn title={"Spicy Masalas"} />
+        <div className="flex gap-5 w-full items-center justify-center ">
+          <Border_Btn
+            title={"Dried Seeds"}
+            className={
+              "!shadow-xl !text-black !mt-0 !text-[18px] !bg-yel-color ! border-yel-color"
+            }
+          />
+          <Border_Btn
+            title={"Spicy Masalas"}
+            className={"hover:!shadow-xl !text-black !mt-0 text-[18px] "}
+          />
         </div>
 
         {/* cards */}

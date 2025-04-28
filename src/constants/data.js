@@ -86,31 +86,31 @@ export const Team_data = [
 export const Premium_Products_data = [
   {
     id: 1,
-    title: "Dried Seeds",
+    title: "Spicy Masalas",
     description:
       "Korem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
-    image: "/images/5.jpg",
+    image: "/images/1pre_product.jpg",
   },
   {
     id: 2,
-    title: "Good Seeds",
+    title: "Herbs Masalas",
     description:
       "Korem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
-    image: "/images/5.jpg",
+    image: "/images/2pre_product.jpg",
   },
   {
     id: 3,
-    title: "Bad Seeds",
+    title: "Mustard Seeds",
     description:
       "Korem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
-    image: "/images/5.jpg",
+    image: "/images/3pre_product.jpg",
   },
   {
     id: 4,
-    title: "Bad Seeds",
+    title: "Caram Masalas",
     description:
       "Korem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
-    image: "/images/5.jpg",
+    image: "/images/4pre_product.jpg",
   },
 ];
 // imports
@@ -121,21 +121,21 @@ import { FaShoppingBag } from "react-icons/fa";
 export const Services_data = [
   {
     id: 1,
-    title: "Dried Seeds",
+    title: "Money Back Garuntee",
     description:
       "Korem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
     image: <FaShoppingBag />,
   },
   {
     id: 2,
-    title: "Good Seeds",
+    title: "Free shipping",
     description:
       "Sit amet dolor consecteur adipisicing elitsed do eiusmod tempor incididunt ulabore et dolore ulabore et dolore.",
     image: <GrPowerCycle />,
   },
   {
     id: 3,
-    title: "Bad Seeds",
+    title: "23/7 Costumer",
     description:
       "Korem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
     icon: <IoIosTimer />,
@@ -145,13 +145,13 @@ export const Services_data = [
 export const Blog_Post_data = [
   {
     id: 1,
-    title: "Dried Seeds",
+    title: "Black Paper Powder",
     author: "Ram M",
     date: "2023-10-01",
     comments: 5,
     description:
-      "Korem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
-    image: "/images/1.jpg",
+      "  Quis imperdiet massa tincidunt nunc pulvinar sapien et. Gravida quis blandit turpis cursus in hac. Fames ac turpis egestas integer eget aliquet nib.",
+    image: "/images/1blog.jpg",
   },
   {
     id: 2,
@@ -160,8 +160,8 @@ export const Blog_Post_data = [
     date: "2023-10-01",
     comments: 5,
     description:
-      "Sit amet dolor consecteur adipisicing elitsed do eiusmod tempor incididunt ulabore et dolore ulabore et dolore.",
-    image: "/images/1.jpg",
+      "  Quis imperdiet massa tincidunt nunc pulvinar sapien et. Gravida quis blandit turpis cursus in hac. Fames ac turpis egestas integer eget aliquet nib.",
+    image: "/images/2blog.jpg",
   },
 ];
 export const Items_data = [

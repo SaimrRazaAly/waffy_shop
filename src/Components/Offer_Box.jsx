@@ -1,19 +1,20 @@
-import Image from "next/image";
 import OverLay from "./OverLay";
-
+import Image from "next/image";
 const Offer_Box = ({ title, image }) => {
   return (
-    <div className=" lg:w-[400px] lg:h-[300px] sm:w-[350px] w-[80%] mx-auto sm:mx-0 h-[250px] md:mt-10 mt-0 overflow-hidden relative group">
-      <Image
-        src={image}
-        alt="Foods"
-        width={400}
-        height={300}
-        className="object-contain bg-center"
-      />
+    <div className="relative  w-full h-[300px] tlg:w-[335px]  mt-0 overflow-hidden group">
+      {/* Image */}
+      <div className="absolute inset-0 w-full h-full">
+        <Image
+          src={image}
+          alt="Foods"
+          fill
+          className="object-cover object-center"
+        />
+      </div>
 
       {/* Overlay */}
-      <div className="absolute inset-0 w-0 bg-black opacity-30 group-hover:w-full transition-all duration-700 " />
+      <div className="absolute inset-0 bg-black opacity-50 w-0 group-hover:w-full transition-all duration-700" />
 
       {/* Content */}
       <OverLay title={title} />
@@ -21,5 +22,4 @@ const Offer_Box = ({ title, image }) => {
   );
 };
 
-export default Offer_Box;
-
+export default Offer_Box

@@ -11,6 +11,7 @@ import { LiaCommentsSolid } from "react-icons/lia";
 
 import { GrLinkNext } from "react-icons/gr";
 import { GrLinkPrevious } from "react-icons/gr";
+import Link from "next/link";
 
 const Blog_Post = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -28,15 +29,15 @@ const Blog_Post = () => {
   };
 
   return (
-    <section className="my-10 overflow-hidden xl:px-30">
+    <section className="overflow-hidden px-[30px] mt-[100px] mb-[50px] ">
       <Sec_Heading
         title={"Blog Post"}
         para={"Suspendisse potenti nullam ac tortor vitae purus faucibus orn."}
       />
 
-      <div className="relative w-full overflow-hidden">
+      <div className="relative w-full xl:px-[50px] mx-[15.5px] lg:mx-[30px] px-[30px]">
         <div
-          className="flex transition-transform duration-500 ease-in-out"
+          className="flex transition-transform duration-500 ease-in-out "
           style={{
             width: `${Blog_Post_data.length * 100}%`,
             transform: `translateX(-${
@@ -47,11 +48,11 @@ const Blog_Post = () => {
           {Blog_Post_data.map((v) => (
             <div
               key={v.id}
-              className="w-full relative flex-shrink-0 px-5 flex flex-col xl:flex-row items-center justify-center gap-5 border border-amber-400 p-2"
+              className="w-full relative flex-shrink-0 h-full    flex flex-col xl:flex-row items-center justify-center "
               style={{ width: `${100 / Blog_Post_data.length}%` }}
             >
               {/* Image */}
-              <div className="lg:w-[400px] lg:h-[300px] relative w-full sm:h-[500px] h-[400px] rounded-md overflow-hidden">
+              <div className="relative w-[100%] lg:w-[60%] xl:h-[271px] lg:h-[700px] mr-[30px] sm:h-[400px]  h-[260px] rounded-md ">
                 <Image
                   src={v.image}
                   alt={v.title}
@@ -61,29 +62,35 @@ const Blog_Post = () => {
               </div>
 
               {/* Text */}
-              <div className="flex flex-col gap-5 items-start">
-                <h2 className="text-4xl font-bold font-serif">{v.title}</h2>
-                <ul className="flex gap-2 flex-wrap text-[18px]">
-                  <li className="flex gap-1 items-center">
-                    <span className="text-amber-900">
+              <div className="flex flex-col items-start p-[30px] ">
+                <Link href={"/colletion/all"}>
+                  <h2 className="text-[20.4px] font-bold font-serif mb-[12px]">
+                    {v.title}
+                  </h2>
+                </Link>
+                <ul className="flex  items-center flex-wrap text-[16px] mb-[12px] w-full">
+                  <li className="flex  items-center font-light">
+                    <span className="text-amber-900 mr-[8px] text-[18px]">
                       <FaUser />
                     </span>
-                    {v.author} |
+                    {v.author} 
                   </li>
-                  <li className="flex gap-1 items-center">
-                    <span className="text-amber-900">
+                  <span className="px-[15px]">|</span>
+                  <li className="flex  items-center font-light">
+                  <span className="text-amber-900 mr-[8px] text-[18px]">
                       <HiCalendarDateRange />
                     </span>
-                    {v.date} |
+                    {v.date} 
                   </li>
-                  <li className="flex gap-1 items-center">
-                    <span className="text-amber-900">
+                  <span className="px-[15px]">|</span>
+                  <li className="flex items-center font-light">
+                    <span className="text-amber-900 mr-[8px] text-[18px]">
                       <LiaCommentsSolid />
                     </span>
                     {v.comments} comments
                   </li>
                 </ul>
-                <p>{v.description}</p>
+                <p className="mb-[20px] text-[16px] lg:w-[85%]">{v.description}</p>
                 <Border_Btn title={"Read More"} />
               </div>
             </div>
@@ -91,18 +98,18 @@ const Blog_Post = () => {
         </div>
 
         {/* Controls */}
-        <div className="flex justify-center gap-5 mt-5">
+        <div className=" absolute top-1/2 sm:top-[52%]  sm:-left-0 -left-4 flex justify-between w-full text-[20px] gap-5 mt-5">
           <button
             onClick={prevSlide}
-            className="bg-amber-500 text-white px-2 py-2 rounded-full cursor-pointer"
+            className=" border-amber-900 w-[40px] h-[40px] border-2 transition-all duration-500 bg hover:border-yel-color hover:bg-yel-color rounded-full cursor-pointer"
           >
-            <GrLinkPrevious />
+            {"<"}
           </button>
           <button
             onClick={nextSlide}
-            className=" bg-amber-500 text-white px-2 py-2 rounded-full cursor-pointer"
+            className=" border-amber-900 w-[40px] h-[40px] border-2 transition-all duration-500 bg hover:border-yel-color hover:bg-yel-color rounded-full cursor-pointer"
           >
-            <GrLinkNext />
+            {">"}
           </button>
         </div>
       </div>

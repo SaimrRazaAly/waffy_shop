@@ -24,15 +24,17 @@ const Team_Card = ({ name, profession, image }) => {
         <p className="font-extralight  my-[10px] ">{profession}</p>
 
         <ul className="flex gap-3.5 text-[16px] mb-[30px] mt-[10px] px-[15px]">
-  {Team_icons_data.map((item) => (
-    <li key={item.id} className="m-[5px] opacity-90">
-      <a href={item.href} className="w-[30px] h-[30px] text-[16px] leading-[30px]">
-        {item.icon}
-      </a>
-    </li>
-  ))}
-</ul>
-
+          {Team_icons_data.map((item) => (
+            <li key={item.id} className="m-[5px] opacity-90">
+              <a
+                href={item.href}
+                className="w-[30px] h-[30px] text-[16px] leading-[30px]"
+              >
+                {item.icon}
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

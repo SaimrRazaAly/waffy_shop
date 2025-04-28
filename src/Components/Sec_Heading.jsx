@@ -8,7 +8,7 @@ const Sec_Heading = ({ title, para }) => {
         {title}
       </h2>
       <p className="text-[16px] pb-[7px]">{para}</p>
-      <Image src={"/icons/stars.png"} alt={title} width={70} height={20} />
+      <Image src={"/icons/stars.png"} alt={title} width={60} height={20} />
     </div>
   );
 };

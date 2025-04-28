@@ -7,7 +7,7 @@ import { GrLinkPrevious } from "react-icons/gr";
 const slides = [
   {
     image: "/images/1.jpg",
-    heading: "Herbs and Spices",
+    heading: "Herbs & Spices",
     subheading: "FLAT 10% OFF",
     coupon: "USE COUPON: 1234",
   },
@@ -34,7 +34,7 @@ export default function Carousel() {
   };
 
   return (
-    <section className="w-full   h-screen">
+    <section className="w-full   h-[150vh]  ">
       {/* <Navbar/> */}
       <div className="overflow-hidden absolute top-0 ">
         <div
@@ -44,7 +44,10 @@ export default function Carousel() {
           }}
         >
           {slides.map((slide, index) => (
-            <div key={index} className="min-w-full h-screen relative">
+            <div
+              key={index}
+              className="min-w-full h-[150vh]  overflow-x-hidden px-[60px] relative"
+            >
               <img
                 src={slide.image}
                 alt={`Slide ${index + 1}`}
@@ -54,14 +57,14 @@ export default function Carousel() {
               <div className="absolute inset-0 bg-black opacity-50"></div>
 
               {/* Text Content */}
-              <div className="absolute w-[70%] sm:w-auto  top-[59%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white z-10">
-                <h2 className="sm:text-5xl   text-[30px] mt-10 font-serif italic font-semibold">
+              <div className="absolute    p-[20px] w-[70%]  flex flex-col items-center justify-center md:bg-transparent lg:top-[45%]   md:top-[50%] top-[40%] bg-black  left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white z-10">
+                <h2 className="    text-[43px] md:text-[58px] font-serif italic font-semibold px-[30px] mb-[10px]">
                   {slide.heading}
                 </h2>
-                <h3 className="sm:text-4xl  text-[26px]  mt-4 text-yellow-500 border-t border-red-500 border-b py-2">
+                <h3 className="  text-[30px] md:text-[40px] lg:w-[40%]  text-yellow-500 border-t border-red-500 border-b  mt-0 lg:mb-[10px] mb-[20px] mx-[20px]">
                   {slide.subheading}
                 </h3>
-                <h3 className="sm:text-2xl  text-bold text-[17px] mt-2 text-yellow-500">
+                <h3 className="md:text-[26px] mb-[10px] text-bold text-[17px] text-yellow-500">
                   {slide.coupon}
                 </h3>
               </div>
@@ -70,19 +73,32 @@ export default function Carousel() {
         </div>
       </div>
 
-      <button
-        className="absolute top-1/2 left-2 transform -translate-y-1/2 sm:p-3 p-1 bg-gray-700 bg-opacity-50 rounded-full text-white hover:bg-opacity-75 focus:outline-none"
+      {/* <button
+        className="absolute top-[60%] left-2 transform -translate-y-1/2 sm:p-3 p-1 bg-gray-700 bg-opacity-50 rounded-full text-white hover:bg-opacity-75 focus:outline-none"
         onClick={() => scrollCarousel(-1)}
         aria-label="Previous Slide"
       >
         <GrLinkPrevious />
       </button>
       <button
-        className="absolute top-1/2 right-2 transform -translate-y-1/2 sm:p-3 p-1 bg-gray-700 bg-opacity-50 rounded-full text-white hover:bg-opacity-75 focus:outline-none"
+        className="a"
         onClick={() => scrollCarousel(1)}
         aria-label="Next Slide"
       >
         <GrLinkNext />
+      </button> */}
+
+      <button
+        onClick={() => scrollCarousel(-1)}
+        className=" flex items-center justify-center absolute top-[60%] left-2 transform -translate-y-1/2 sm:p-3 text-[24px] rounded-full text-white hover:bg-opacity-75 focus:outline-none  border-amber-900 w-[40px] h-[40px] border-2 transition-all duration-500 bg hover:border-yel-color hover:bg-yel-color cursor-pointer"
+      >
+        {"<"}
+      </button>
+      <button
+        onClick={() => scrollCarousel(1)}
+        className=" flex items-center justify-center  absolute top-[60%] right-2 transform -translate-y-1/2 sm:p-3 text-[24px] rounded-full text-white hover:bg-opacity-75 focus:outline-none  border-amber-900 w-[40px] h-[40px] border-2 transition-all duration-500 bg hover:border-yel-color hover:bg-yel-color cursor-pointer"
+      >
+        {">"}
       </button>
     </section>
   );

@@ -6,20 +6,20 @@ import Border_Btn from "@/Components/Border_Btn";
 
 const Premium_Products = () => {
   return (
-    <section className="py-10 md:px-4 sm:px-2 bg-slate-300">
+    <section className="px-[30px] bg-[#f4f4f4] md:px-[2%] lg:px-[5%] tlg:px-[100px] py-[80px] ">
       <Sec_Heading
         title={"Premium Quality Products"}
         para={
           "At volutpat diam ut venenatis tellus in metus vulputate sit set ramet sagit."
         }
       />
-      <div className="flex flex-wrap mx-auto gap-1 items-center justify-center mt-10 border ">
+      <div className="grid grid-cols-1 w-full md:grid-cols-2 tlg:grid-cols-4 gap-[30px]  md:gap-0 place-items-center ">
         {Premium_Products_data.map((v, i) => (
           <div
-            className="sm:max-w-[300px] border-red-900 px-7 md:px-0 flex flex-col items-center justify-center mx-2 my-5"
+            className=" border-red-900 flex flex-col items-center justify-center mx-auto "
             key={v.id}
           >
-            <div className="relative sm:w-[300px] w-[100%] h-[280px]">
+            <div className="relative  w-[100%] h-[280px] sm:h-[340px] md:h-[282px] md:w-[90%] tlg:h-[158px] ">
               <Image
                 src={v.image}
                 alt={v.title}
@@ -28,10 +28,15 @@ const Premium_Products = () => {
               />
             </div>
 
-            <div className="text-center mt-5 px-2">
-              <h2 className="font-bold font-serif mb-5 text-2xl">{v.title}</h2>
-              <p className="mb-5">{v.description}</p>
-              <Border_Btn title={"Readmore"} />
+            <div className="text-center mt-[20px] px-2">
+              <h2 className="font-bold font-serif  text-[20px] mb-[10px]">
+                {v.title}
+              </h2>
+              <p className="text-[16px] mb-[20px]">{v.description}</p>
+              <Border_Btn
+                title={"Read more"}
+                className={"!mt-[0px] !text-black"}
+              />
             </div>
           </div>
         ))}

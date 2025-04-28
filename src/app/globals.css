@@ -74,6 +74,7 @@ li {
 
 @theme {
   --color-light-white: #ffffff;
+  --color-yel-color: #f4b323;
   --font-main: var(--font_Spicy_Rice);
   --font-primary: var(--font-Roboto);
   --breakpoint-*: initial;

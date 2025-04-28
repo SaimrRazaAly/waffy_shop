@@ -18,7 +18,7 @@ const Banner = ({ banner1 }) => {
           </p>
           <div className=" flex gap-5">
             <Border_Btn title={"View More"} border_color={"amber"} />
-            <Border_Btn title={"Shop Now"} border_color={"white"} />
+            <Border_Btn title={"Shop Now"} />
           </div>
         </div>
       </div>
@@ -26,24 +26,23 @@ const Banner = ({ banner1 }) => {
   ) : (
     <div className="relative mt-10 h-[100vh] py-10 w-full flex items-center justify-center text-white overflow-hidden">
       {/* Background using `before` */}
-      <div className="absolute inset-0 before:content-[''] before:absolute before:inset-0 before:bg-[url('/images/5.jpg')] before:bg-cover before:bg-center before:brightness-50 before:z-0" />
+      <div className="absolute inset-0 before:content-[''] before:absolute before:inset-0 before:bg-[url('/images/5.jpg')] before:bg-cover before:bg-center before:brightness-[0.27] before:z-0" />
 
       {/* Text Content */}
       <div className="relative z-10 text-center px-[15px]">
-        <h2 className="text-[40px] md:text-4xl font-extrabold font-serif mb-[20px] text-light-white">
-          {" "}
+        <h2 className="text-[40px] md:text-4xl font-extrabold font-serif mb-[10px] text-light-white">
           Cardamom / Clove / Cumi
         </h2>
-        <h1 className="text-[70px] md:text-[90px] mb-[25px] font-bold text-amber-400">
+        <h1 className="text-[70px] mb-[20px] font-bold text-[#f4b323]">
           50% OFF
         </h1>
-        <p className="text-[30px] md:text-4xl font-mdeium  text-amber-400 mb-[30px] tracking-[4.8px] w-full">
-          {" "}
+        <p className="text-[30px] md:text-4xl font-mdeium  text-[#f4b323] mb-[30px] tracking-[8.8px] w-full">
           ALL PRODUCTS
         </p>
-        <div className="flex gap-5 mt-10 items-center justify-center">
-          <Border_Btn title={"Shop Now"} className={""} />
-          <Border_Btn title={"View more"} border_color={"white"} />
+        <div className="flex gap-[15px] -mt-4 items-center justify-center">
+     
+          <Border_Btn title={"Shop Now"} className={"!border-white !text-white hover:!text-white !text-[18px] hover:!border-yel-color "}/>
+          <Border_Btn title={"View more"} className={"!text-[18px]"} />
         </div>
       </div>
     </div>
