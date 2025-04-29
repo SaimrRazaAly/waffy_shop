@@ -4,6 +4,45 @@ li {
   list-style: none;
 }
 
+p {
+  font-family: sans-serif;
+}
+/* ====================================================================== */
+@media (max-width: 1024px) {
+  .custom-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 260px);
+    grid-template-rows: repeat(2, 200px);
+    gap: 19px;
+    grid-template-areas:
+      "box1 box2 box4 box5"
+      "box1 box3 box4 box6";
+  }
+}
+@media (min-width: 768px) {
+  .custom-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    grid-template-areas:
+      "box1 box1 box1 empty"
+      "box2 box4 box5 empty"
+      "box3 box4 box6 empty";
+  }
+}
+
+.custom-grid {
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 200px);
+  grid-template-areas:
+    "box1"
+    "box2"
+    "box3"
+    "box4"
+    "box5"
+    "box6";
+}
+/* ====================================================================== */
+
 @keyframes swing {
   0% {
     transform: rotate(0deg);
@@ -80,6 +119,7 @@ li {
   --breakpoint-*: initial;
   --breakpoint-tlg: 1200px;
   /* default one */
+  --breakpoint-mini-sm: 575px;
   --breakpoint-sm: 640px;
   --breakpoint-md: 768px;
   --breakpoint-2xmd: 960px;

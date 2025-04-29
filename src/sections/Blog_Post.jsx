@@ -29,15 +29,15 @@ const Blog_Post = () => {
   };
 
   return (
-    <section className="overflow-hidden px-[30px] mt-[100px] mb-[50px] ">
+    <section className="overflow-hidden px-[30px] lg:px-[40px] mt-[100px] mb-[50px] ">
       <Sec_Heading
         title={"Blog Post"}
         para={"Suspendisse potenti nullam ac tortor vitae purus faucibus orn."}
       />
 
-      <div className="relative w-full xl:px-[50px] mx-[15.5px] lg:mx-[30px] px-[30px]">
+      <div className="relative w-[100%]  xl:px-[50px] mx-[0px] overflow-hidden border-2 border-red-400">
         <div
-          className="flex transition-transform duration-500 ease-in-out "
+          className="flex items-center justify-center transition-transform gap-2 duration-500 ease-in-out overflow-hidden border border-yel-color "
           style={{
             width: `${Blog_Post_data.length * 100}%`,
             transform: `translateX(-${
@@ -48,7 +48,7 @@ const Blog_Post = () => {
           {Blog_Post_data.map((v) => (
             <div
               key={v.id}
-              className="w-full relative flex-shrink-0 h-full    flex flex-col xl:flex-row items-center justify-center "
+              className="w-full relative  flex flex-col   xl:flex-row items-center justify-center overflow-hidden "
               style={{ width: `${100 / Blog_Post_data.length}%` }}
             >
               {/* Image */}
@@ -91,14 +91,14 @@ const Blog_Post = () => {
                   </li>
                 </ul>
                 <p className="mb-[20px] text-[16px] lg:w-[85%]">{v.description}</p>
-                <Border_Btn title={"Read More"} />
+                <Border_Btn title={"Read More"} className={"!text-black"}/>
               </div>
             </div>
           ))}
         </div>
 
         {/* Controls */}
-        <div className=" absolute top-1/2 sm:top-[52%]  sm:-left-0 -left-4 flex justify-between w-full text-[20px] gap-5 mt-5">
+        <div className=" absolute top-1/2 sm:top-[52%] w-full  sm:-left-0 -left-4 flex justify-between text-[20px] gap-5 mt-5">
           <button
             onClick={prevSlide}
             className=" border-amber-900 w-[40px] h-[40px] border-2 transition-all duration-500 bg hover:border-yel-color hover:bg-yel-color rounded-full cursor-pointer"

@@ -757,3 +757,47 @@ export const Team_icons_data = [
     ),
   },
 ];
+
+export const footerData = [
+  {
+    heading: "About us",
+    items: [
+      "Pellentesque posuere orci lobortis scelerisque blandit. Donec id tellus lacinia an, tincidunt risus ac, consequat velit.",
+    ],
+  },
+  {
+    heading: "Help",
+    items: [
+      "Serach",
+      "Help",
+      "Information",
+      "Privacy Policy",
+      "Shipping Details",
+    ],
+  },
+  {
+    heading: "Support",
+    items: ["Contact us", "About us", "Careers", "Refunds", "Deliveries"],
+  },
+  {
+    heading: "Information",
+    items: [
+      "Serach",
+      "Help",
+      "Information",
+      "Privacy Policy",
+      "Shipping Details",
+    ],
+  },
+
+  {
+    heading: "Contact us",
+    items: [
+      "11244 Niki Lauda 455 New Zealand",
+      "0000 - 123 - 456789",
+      "9.30AM - 7.30PM",
+      "mail@example.com",
+    ],
+    isIconSection: true,
+  },
+];

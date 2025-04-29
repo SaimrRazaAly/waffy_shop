@@ -24,7 +24,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className="relative top-0 w-full flex flex-col gap-5 items-center justify-center  p-3 z-50">
+    <header className="relative top-0 w-full flex flex-col gap-5 items-center justify-center  pt-[25px]  pb-[15px] z-50 mx-auto">
       {/* Top Row: Logo + Icons */}
       <div className="flex items-center justify-between px-4">
         <Link href="/">
@@ -39,8 +39,8 @@ const Navbar = () => {
       {/* Icons (always visible at top right) */}
 
       <div
-        className=" gap-4 text-xl flex justify-between items-center   w-[90%] py-3 px-2
-       bg-black xl:bg-transparent text-white "
+        className=" gap-4 text-xl flex justify-between items-center   mx-auto w-[80%] py-3 px-2
+       !bg-black xl:bg-transparent text-white "
       >
         <div
           className="lg:hidden text-2xl cursor-pointer links_hover_Color "
@@ -67,9 +67,9 @@ const Navbar = () => {
         <div
           className={`${
             isSticky
-              ? "lg:fixed lg:w-full lg:py-4 lg:top-0 lg:px-20 lg:left-0   lg:items-center "
+              ? "lg:fixed lg:w-full lg:py-[20px] lg:top-0 lg:px-[15px] lg:left-0 !justify-around    lg:items-center "
               : ""
-          }  lg:flex lg:flex-row-reverse   lg:justify-between  lg:items-center  px-5 hidden py-5 lg:bg-black lg:text-white lg:w-[110%]`}
+          }  lg:flex lg:flex-row-reverse   lg:justify-between  lg:items-center  py-[11px] hidden px-[15px] lg:bg-black lg:text-white lg:w-[110%] `}
         >
           <div className="hidden lg:flex gap-2 items-center justify-center lg:gap-4">
             <CiSearch className="links_hover_Color" />
@@ -87,16 +87,16 @@ const Navbar = () => {
 
           {/* Hamburger Menu on Mobile */}
           <nav
-            className={`hidden  ${
-              isSticky ? " lg:px-4 lg:py-2  " : ""
-            }   lg:flex items-center  justify-end gap-8 mt-3 lg:mt-0 lg:text-white text-black text-[18px]`}
+            className={`hidden   ${
+              isSticky ? "lg:px-4 lg:py-2  " : ""
+            }   lg:flex items-center  justify-end  mt-3 lg:mt-0 bg-black lg:text-white text-black text-[18px]`}
           >
             {Navbar_data.map((item, i) => (
               <li key={item.id} className="relative group list-none">
                 <Link
                   href={item.link}
                   onClick={() => setClick(false)}
-                  className="text-2xl lg:text-[16px] hover:text-amber-500 transition"
+                  className="text-2xl lg:text-[16px] hover:text-amber-500 transition p-[15px]"
                 >
                   {item.children ? item.title + " ↓" : item.title}
                 </Link>

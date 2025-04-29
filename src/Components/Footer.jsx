@@ -1,253 +1,76 @@
+import { footerData } from "@/constants/data";
 import React from "react";
-import { FaTwitter } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaSquarePinterest } from "react-icons/fa6";
+
 const Footer = () => {
   return (
-    <div>
+    <footer className=" text-white">
       <div className="relative before_Image">
-        <footer className="relative z-10">
-          <div className="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8">
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4">
-              <div>
-                <p className="text-amber-400 font-extrabold text-2xl font-serif">
-                  About us
-                </p>
+        <div className="px-4 lg:mx-[100px] py-[40px] pt-[60px]">
+          <div className="grid grid-cols-1 mini-sm:grid-cols-2 tlg:grid-cols-6 gap-[30px]">
+            {footerData.map((section, index) => (
+              <ul
+                key={index}
+                className={`space-y-2 ${index === 0 ? "tlg:col-span-2 tlg:px-[25px]" : ""}`}
+              >
+                <h2 className="text-yel-color text-[24px] font-semibold mb-4">
+                  {section.heading}
+                </h2>
 
-                <p className="mt-4 max-w-xs text-white">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse
-                  non cupiditate quae nam molestias.
-                </p>
-
-                <p className="text-amber-400  mt-5"> Read More</p>
-
-                <ul className="mt-8 flex gap-6">
-                  <li>
-                    <a
-                      href="#"
-                      rel="noreferrer"
-                      target="_blank"
-                      className="text-white transition hover:opacity-75"
-                    >
-                      <span className="sr-only">Facebook</span>
-                      <FaFacebook />
+                {section.items.map((item, idx) => (
+                  <li
+                    key={idx}
+                    className={`text-[16px] leading-relaxed transition-all duration-300 ${
+                      index === 0 ? "" : "hover:text-yel-color"
+                    }`}
+                  >
+                    <a href="#">
+                      {index !== 0 && <span className="mr-[10px]">{">"}</span>}
+                      {item}
                     </a>
                   </li>
+                ))}
 
-                  <li>
-                    <a
-                      href="#"
-                      rel="noreferrer"
-                      target="_blank"
-                      className="text-white transition hover:opacity-75"
-                    >
-                      <span className="sr-only">Instagram</span>
+                {index === 0 && (
+                  <div>
+                    <h2 className="text-[16px] my-[30px] leading-relaxed text-yel-color">
+                      Read mroe
+                    </h2>
+                    <div className="flex gap-[10px] items-center">
+                      <FaFacebook className="transition-all duration-500 hover:text-yel-color cursor-pointer" />
+                      <FaSquarePinterest className="transition-all duration-500 hover:text-yel-color cursor-pointer" />
+                      <FaInstagram className="transition-all duration-500 hover:text-yel-color cursor-pointer" />
+                    </div>
+                  </div>
+                )}
 
-                      <FaInstagram />
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      href="#"
-                      rel="noreferrer"
-                      target="_blank"
-                      className="text-white transition hover:opacity-75"
-                    >
-                      <span className="sr-only">Twitter</span>
-                      <FaTwitter />
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4">
-                <div>
-                  <p className="text-amber-400 font-extrabold text-2xl font-serif">
-                    Services
-                  </p>
-
-                  <ul className="mt-6 space-y-4 text-sm">
-                    <li>
-                      <a
-                        href="#"
-                        className="text-white transition hover:opacity-75"
-                      >
-                        {" "}
-                        1on1 Coaching{" "}
-                      </a>
-                    </li>
-
-                    <li>
-                      <a
-                        href="#"
-                        className="text-white transition hover:opacity-75"
-                      >
-                        {" "}
-                        Company Review{" "}
-                      </a>
-                    </li>
-
-                    <li>
-                      <a
-                        href="#"
-                        className="text-white transition hover:opacity-75"
-                      >
-                        {" "}
-                        Accounts Review{" "}
-                      </a>
-                    </li>
-
-                    <li>
-                      <a
-                        href="#"
-                        className="text-white transition hover:opacity-75"
-                      >
-                        {" "}
-                        HR Consulting{" "}
-                      </a>
-                    </li>
-
-                    <li>
-                      <a
-                        href="#"
-                        className="text-white transition hover:opacity-75"
-                      >
-                        {" "}
-                        SEO Optimisation{" "}
-                      </a>
-                    </li>
+                {section.isIconSection && (
+                  <ul className="flex gap-3 mt-4">
+                    {[...Array(6)].map((_, i) => (
+                      <li key={i}>icons</li>
+                    ))}
                   </ul>
-                </div>
-
-                <div>
-                  <p className="text-amber-400 font-extrabold text-2xl font-serif">
-                    Company
-                  </p>
-
-                  <ul className="mt-6 space-y-4 text-sm">
-                    <li>
-                      <a
-                        href="#"
-                        className="text-white transition hover:opacity-75"
-                      >
-                        {" "}
-                        About{" "}
-                      </a>
-                    </li>
-
-                    <li>
-                      <a
-                        href="#"
-                        className="text-white transition hover:opacity-75"
-                      >
-                        {" "}
-                        Meet the Team{" "}
-                      </a>
-                    </li>
-
-                    <li>
-                      <a
-                        href="#"
-                        className="text-white transition hover:opacity-75"
-                      >
-                        {" "}
-                        Accounts Review{" "}
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-
-                <div>
-                  <p className="text-amber-400 font-extrabold text-2xl font-serif">
-                    Helpful Links
-                  </p>
-
-                  <ul className="mt-6 space-y-4 text-sm">
-                    <li>
-                      <a
-                        href="#"
-                        className="text-white transition hover:opacity-75"
-                      >
-                        {" "}
-                        Contact{" "}
-                      </a>
-                    </li>
-
-                    <li>
-                      <a
-                        href="#"
-                        className="text-white transition hover:opacity-75"
-                      >
-                        {" "}
-                        FAQs{" "}
-                      </a>
-                    </li>
-
-                    <li>
-                      <a
-                        href="#"
-                        className="text-white transition hover:opacity-75"
-                      >
-                        {" "}
-                        Live Chat{" "}
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-
-                <div>
-                  <p className="text-amber-400 font-extrabold text-2xl font-serif">
-                    Legal
-                  </p>
-
-                  <ul className="mt-6 space-y-4 text-sm">
-                    <li>
-                      <a
-                        href="#"
-                        className="text-white transition hover:opacity-75"
-                      >
-                        {" "}
-                        Accessibility{" "}
-                      </a>
-                    </li>
-
-                    <li>
-                      <a
-                        href="#"
-                        className="text-white transition hover:opacity-75"
-                      >
-                        {" "}
-                        Returns Policy{" "}
-                      </a>
-                    </li>
-
-                    <li>
-                      <a
-                        href="#"
-                        className="text-white transition hover:opacity-75"
-                      >
-                        {" "}
-                        Refund Policy{" "}
-                      </a>
-                    </li>
-
-                    <li>
-                      <a
-                        href="#"
-                        className="text-white transition hover:opacity-75"
-                      >
-                        Hiring-3 Statistics
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+                )}
+              </ul>
+            ))}
           </div>
-        </footer>
+        </div>
+
+        <hr className="my-[20px] h-[0.5px] bg-white" />
+
+        <div className="px-4 lg:mx-[100px] flex flex-col sm:flex-row justify-between items-center gap-3 pb-[20px] text-[16px] text-center sm:text-start">
+          <p>© 2025 Waffy (password: buddha) Powered by Shopify</p>
+          <div className="">
+            <a href="#" className="transition-all duration-500 hover:text-yel-color">Home page</a>
+            <span className="px-[10px]">|</span>
+            <a href="#" className="transition-all duration-500 hover:text-yel-color">Privacy Policy</a>
+            <span className="px-[10px]">|</span>
+            <a href="#" className="transition-all duration-500 hover:text-yel-color">Search</a>
+          </div>
+        </div>
       </div>
-    </div>
+    </footer>
   );
 };
 
