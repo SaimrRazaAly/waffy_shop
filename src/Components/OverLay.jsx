@@ -26,32 +26,28 @@
 //   );
 // };
 
+import Border_Btn from "./Border_Btn";
+
 // export default OverLay;
 
 const OverLay = ({ title, para, row, classes }) => {
   return (
     <div
-      className={`absolute bottom-[25px] right-[25px] md:w-auto w-[45%]  bg-[#000000c2] p-[15px] bg-opacity-30 ${classes}   ${
+      className={`absolute bottom-[25px] right-[25px] md:w-auto w-[45%]  bg-[#000000c2] p-[30px] bg-opacity-30 ${classes}   ${
         row === "row-reverse"
-          ? "text-black bg-[#ffff]  "
+          ? "text-black bg-[#fbfbfb]  "
           : "text-white bg-[#000000c2]  "
       }`}
     >
-      <h2
+      <h1
         className={`${
           row === "row-reverse" ? "text-amber-900" : "text-yellow-500"
-        } text-2xl font-black font-serif mb-2 ${para ? "lg:text-4xl" : ""}`}
+        } text-2xl  mb-[15px] ${para ? "lg:text-[40px]" : ""}`}
       >
         {title}
-      </h2>
-      {para && (
-        <p className="capitalize md:text-2xl font-medium sm:mb-10 mb-1">
-          {para}
-        </p>
-      )}
-      <button className="px-[28px] py-[10px] text-[16px] transition duration-500 hover:scale-110 cursor-pointer bg-black hover:bg-orange-400 text-white border-2 border-orange-400 rounded-full font-light">
-        Shop now
-      </button>
+      </h1>
+      {para && <p className="capitalize md:text-[24px]   mb-[15px]">{para}</p>}
+      <Border_Btn title={"Shop Now"} black={false} className={"!mt-0 !mb-0"} />
     </div>
   );
 };

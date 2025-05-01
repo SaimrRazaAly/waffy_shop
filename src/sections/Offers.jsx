@@ -1,3 +1,4 @@
+"use client";
 
 import Offer_Box from "@/Components/Offer_Box";
 import OverLay from "@/Components/OverLay";
@@ -7,41 +8,41 @@ import React from "react";
 
 const Offers = ({ row }) => {
   return (
-    <section className="mt-[20px]">
+    <section className="mt-5 px-6 pt-16 w-full md:max-w-[960px] mx-auto">
       <div
-        className={`mx-auto w-full py-5 items-center flex gap-5 flex-col ${
+        className={`w-full py-5 flex flex-col gap-5 items-center px-6 ${
           row === "row-reverse" ? "tlg:flex-row-reverse" : "tlg:flex-row"
-        }   px-[30px]`}
+        }`}
       >
-        <div className="">
-          <div className="w-full tlg:w-[400px]   tlg:h-[630px] md:h-[350px] h-[250px] mt-10 overflow-hidden relative group">
-            <Image
-              src={images.Image2}
-              alt="Foods"
-              fill
-              className="object-cover"
-            />
+        {/* Left Image Section */}
+        <div className="w-full mt-10 overflow-hidden relative group h-[250px] md:h-[350px] tlg:w-[400px] tlg:h-[630px]">
+          <Image
+            src={images.Image2}
+            alt="Foods"
+            fill
+            className="object-cover"
+          />
 
-            {/* Overlay */}
-            <div className="absolute inset-0 w-0 bg-black opacity-30 group-hover:w-full transition-all duration-700 " />
+          {/* Dark overlay on hover */}
+          <div className="absolute inset-0 w-0 bg-black opacity-30 group-hover:w-full transition-all duration-700" />
 
-            {/* Content */}
-            <OverLay
-              title={"The Flavors of Spices"}
-              para={"50% FLAT OFFER ALL PRODUCTS"}
-              row={row}
-              classes={`xl:right-[10%] xl:left-[2%] xl:!top[2%]  md:!top-[2%] md:!left-[2%] xl:bottom-[50%] `}
-            />
-          </div>
+          {/* Overlay Content */}
+          <OverLay
+            title="The Flavors of Spices"
+            para="50% FLAT OFFER ALL PRODUCTS"
+            row={row}
+            classes="xl:right-[10%] xl:left-[2%] xl:top-[2%] md:top-[2%] md:left-[2%] xl:bottom-[50%]"
+          />
         </div>
 
-        <div className="grid md:grid-cols-2 tlg:grid-rows-2 gap-[26px] place-items-center">
+        {/* Right Grid Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 tlg:grid-rows-2 gap-6 place-items-center">
           {Offer_data.map((item) => (
             <Offer_Box
               key={item.id}
               title={item.title}
               image={item.image}
-              classes="!lg:h-[40%]"
+              classes="lg:h-[40%]"
             />
           ))}
         </div>

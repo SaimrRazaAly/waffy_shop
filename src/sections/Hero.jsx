@@ -34,7 +34,7 @@ export default function Carousel() {
   };
 
   return (
-    <section className="w-full   h-[111.5vh]  border border-red-500 ">
+    <section className="w-full   h-[111.5vh]  ">
       {/* <Navbar/> */}
       <div className="overflow-hidden absolute top-0 ">
         <div
@@ -57,10 +57,10 @@ export default function Carousel() {
               <div className="absolute inset-0 bg-black opacity-50"></div>
 
               {/* Text Content */}
-              <div className="absolute    p-[20px] w-[70%]  flex flex-col items-center justify-center md:bg-transparent lg:top-[50%]   md:top-[50%] top-[40%] bg-black  left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white z-10">
-                <h2 className="    text-[43px] md:text-[58px]   px-[30px] mb-[10px]">
+              <div className="absolute    p-[20px] w-[70%]  flex flex-col items-center justify-center md:bg-transparent  lg:top-[50%]   md:top-[50%] top-[50%] sm:top-[40%] bg-black  left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white z-10">
+                <h1 className="    text-[43px] md:text-[58px]   px-[30px] mb-[10px]">
                   {slide.heading}
-                </h2>
+                </h1>
                 <h3 className=" font-serif text-[30px] md:text-[40px] lg:w-[40%]  text-yellow-500 border-t border-red-500 border-b  mt-0 lg:mb-[10px] mb-[20px] mx-[20px]">
                   {slide.subheading}
                 </h3>

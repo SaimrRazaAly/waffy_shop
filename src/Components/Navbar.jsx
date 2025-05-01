@@ -24,7 +24,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className="relative top-0 w-full flex flex-col gap-5 items-center justify-center  pt-[25px]  pb-[15px] z-50 mx-auto">
+    <header className="relative top-0 font-medium w-full flex flex-col gap-5 items-center justify-center  pt-[25px]  pb-[15px] z-50 mx-auto">
       {/* Top Row: Logo + Icons */}
       <div className="flex items-center justify-between px-4">
         <Link href="/">
@@ -43,7 +43,7 @@ const Navbar = () => {
        !bg-black xl:bg-transparent text-white "
       >
         <div
-          className="lg:hidden text-2xl cursor-pointer links_hover_Color "
+          className="xl:hidden block text-2xl cursor-pointer links_hover_Color "
           onClick={() => setClick(true)}
         >
           <RxHamburgerMenu />
@@ -87,9 +87,9 @@ const Navbar = () => {
 
           {/* Hamburger Menu on Mobile */}
           <nav
-            className={`hidden   ${
-              isSticky ? "lg:px-4 lg:py-2  " : ""
-            }   lg:flex items-center  justify-end  mt-3 lg:mt-0 bg-black lg:text-white text-black text-[18px]`}
+            className={`hidden v  ${
+              isSticky ? "xl:px-4 xl:py-2  " : ""
+            }   xl:flex items-center  justify-end  mt-3 xl:mt-0 bg-black xl:text-white text-black text-[18px]`}
           >
             {Navbar_data.map((item, i) => (
               <li key={item.id} className="relative group list-none">

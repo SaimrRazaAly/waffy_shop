@@ -13,7 +13,7 @@ const Team = () => {
         title={"Our Team"}
         para={"Lacus vestibulum sed arcu non sit eru racdi odio euismod."}
       />
-      <div className="grid 2xmd:mx-[2%] grid-cols-1 gap-[30px] md:grid-cols-2  tlg:mx-[84px] lg:mx-[119px] tlg:grid-cols-4  md:px-0 px-[30px]">
+      <div className="grid md:mx-[2%] grid-cols-1 gap-[30px] md:grid-cols-2  tlg:mx-[84px] lg:mx-[119px] tlg:grid-cols-4  md:px-0 px-[30px]">
         {Team_data.map((v, i) => {
           return (
             <Team_Card

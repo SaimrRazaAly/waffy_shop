@@ -34,7 +34,7 @@ const CartInfo = () => {
                         className="absolute top-2 left-2 w-[30px] h-[30px] rounded-full text-amber-900 border flex items-center justify-center border-amber-900 font-bold text-lg cursor-pointer hover:border-amber-900 hover:bg-amber-400 transition"
                         onClick={() => reset(v._id)}
                       >
-                        X
+                        <h2>X</h2>
                       </div>
 
                       <div className="relative w-full h-60 mt-12 mb-4">
@@ -78,7 +78,8 @@ const CartInfo = () => {
             <div>
               <h3 className="main_text text-2xl">order summary</h3>
               <h5 className="main_text text-[16px]  my-2 !font-medium">
-                order summary : ${getTotalCartAmount() === 0 ? 0 : getTotalCartAmount()}
+                order summary : $
+                {getTotalCartAmount() === 0 ? 0 : getTotalCartAmount()}
               </h5>
               <Border_Btn title={"Add a note to your order"} />
             </div>

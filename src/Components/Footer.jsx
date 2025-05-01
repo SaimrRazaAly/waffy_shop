@@ -8,11 +8,13 @@ const Footer = () => {
     <footer className=" text-white">
       <div className="relative before_Image">
         <div className="px-4 lg:mx-[100px] py-[40px] pt-[60px]">
-          <div className="grid grid-cols-1 mini-sm:grid-cols-2 tlg:grid-cols-6 gap-[30px]">
+          <div className="grid grid-cols-1 mini-sm:grid-cols-2 tlg:grid-cols-6 tlg:gap-0  gap-[30px] sm:gap-[100px]">
             {footerData.map((section, index) => (
               <ul
                 key={index}
-                className={`space-y-2 ${index === 0 ? "tlg:col-span-2 tlg:px-[25px]" : ""}`}
+                className={`space-y-2  ${
+                  index === 0 ? "tlg:col-span-2 tlg:px-[25px]" : ""
+                }`}
               >
                 <h2 className="text-yel-color text-[24px] font-semibold mb-4">
                   {section.heading}
@@ -62,11 +64,26 @@ const Footer = () => {
         <div className="px-4 lg:mx-[100px] flex flex-col sm:flex-row justify-between items-center gap-3 pb-[20px] text-[16px] text-center sm:text-start">
           <p>© 2025 Waffy (password: buddha) Powered by Shopify</p>
           <div className="">
-            <a href="#" className="transition-all duration-500 hover:text-yel-color">Home page</a>
+            <a
+              href="#"
+              className="transition-all duration-500 hover:text-yel-color"
+            >
+              Home page
+            </a>
             <span className="px-[10px]">|</span>
-            <a href="#" className="transition-all duration-500 hover:text-yel-color">Privacy Policy</a>
+            <a
+              href="#"
+              className="transition-all duration-500 hover:text-yel-color"
+            >
+              Privacy Policy
+            </a>
             <span className="px-[10px]">|</span>
-            <a href="#" className="transition-all duration-500 hover:text-yel-color">Search</a>
+            <a
+              href="#"
+              className="transition-all duration-500 hover:text-yel-color"
+            >
+              Search
+            </a>
           </div>
         </div>
       </div>

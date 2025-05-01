@@ -29,9 +29,9 @@ const Premium_Products = () => {
             </div>
 
             <div className="text-center mt-[20px] px-2">
-              <h2 className="font-bold font-serif  text-[20px] mb-[10px]">
+              <h1 className="text-main-color lg:text-[24px] text-[20px] mb-[10px]">
                 {v.title}
-              </h2>
+              </h1>
               <p className="text-[16px] mb-[20px]">{v.description}</p>
               <Border_Btn
                 title={"Read more"}
@@ -41,6 +41,7 @@ const Premium_Products = () => {
           </div>
         ))}
       </div>
+     
     </section>
   );
 };

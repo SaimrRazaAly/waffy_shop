@@ -2,7 +2,7 @@ import OverLay from "./OverLay";
 import Image from "next/image";
 const Offer_Box = ({ title, image }) => {
   return (
-    <div className="relative  w-full h-[300px] tlg:w-[335px]  mt-0 overflow-hidden group">
+    <div className="relative w-[290px]  sm:w-full  h-[300px] tlg:w-[335px]  mt-0 overflow-hidden group">
       {/* Image */}
       <div className="absolute inset-0 w-full h-full">
         <Image

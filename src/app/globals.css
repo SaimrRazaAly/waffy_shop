@@ -4,7 +4,17 @@ li {
   list-style: none;
 }
 
-p {
+p,
+F span,
+a,
+li,
+ul,
+button,
+h2,
+h3,
+h4,
+input,
+textarea {
   font-family: sans-serif;
 }
 /* ====================================================================== */
@@ -107,6 +117,10 @@ p {
   }
   .primary_Font {
   }
+
+  .border_animaion{
+    @apply absolute left-0 top-0 w-[3px] h-full  transform translate-y-full group-hover:translate-y-0 transition-transform duration-700
+  }
 }
 
 /* ======================= CONFIGURAIONS ========================= */
@@ -114,6 +128,7 @@ p {
 @theme {
   --color-light-white: #ffffff;
   --color-yel-color: #f4b323;
+  --color-main-color: #9f4103;
   --font-main: var(--font_Spicy_Rice);
   --font-primary: var(--font-Roboto);
   --breakpoint-*: initial;
@@ -127,3 +142,18 @@ p {
   --breakpoint-xl: 1280px;
   --breakpoint-2xl: 1536px;
 }
+
+
+
+
+
+
+
+
+
+
+/* ================================ border anitaoion ====================== */
+
+
+
+/* ========================================================================= */

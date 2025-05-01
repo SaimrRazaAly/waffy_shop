@@ -29,15 +29,15 @@ const Blog_Post = () => {
   };
 
   return (
-    <section className="overflow-hidden px-[30px] lg:px-[40px] mt-[100px] mb-[50px] ">
+    <section className="overflow-hidden px-[30px] lg:px-[40px] mt-[100px] mb-[50px]  relative">
       <Sec_Heading
         title={"Blog Post"}
         para={"Suspendisse potenti nullam ac tortor vitae purus faucibus orn."}
       />
 
-      <div className="relative w-[100%]  xl:px-[50px] mx-[0px] overflow-hidden border-2 border-red-400">
+      <div className="relative w-[100%]  mx-[0px] overflow-hidden">
         <div
-          className="flex items-center justify-center transition-transform gap-2 duration-500 ease-in-out overflow-hidden border border-yel-color "
+          className="flex items-center justify-center transition-transform gap-2 duration-500 ease-in-out overflow-hidden"
           style={{
             width: `${Blog_Post_data.length * 100}%`,
             transform: `translateX(-${
@@ -48,11 +48,11 @@ const Blog_Post = () => {
           {Blog_Post_data.map((v) => (
             <div
               key={v.id}
-              className="w-full relative  flex flex-col   xl:flex-row items-center justify-center overflow-hidden "
+              className="w-full relative  flex flex-col lg:px-[40px]  tlg:flex-row items-center justify-center overflow-hidden "
               style={{ width: `${100 / Blog_Post_data.length}%` }}
             >
               {/* Image */}
-              <div className="relative w-[100%] lg:w-[60%] xl:h-[271px] lg:h-[700px] mr-[30px] sm:h-[400px]  h-[260px] rounded-md ">
+              <div className="relative w-full tlg:w-[85%]  tlg:h-[271px] lg:h-[700px] mr-[30px] sm:h-[400px]  h-[260px] rounded-md ">
                 <Image
                   src={v.image}
                   alt={v.title}
@@ -73,14 +73,14 @@ const Blog_Post = () => {
                     <span className="text-amber-900 mr-[8px] text-[18px]">
                       <FaUser />
                     </span>
-                    {v.author} 
+                    {v.author}
                   </li>
                   <span className="px-[15px]">|</span>
                   <li className="flex  items-center font-light">
-                  <span className="text-amber-900 mr-[8px] text-[18px]">
+                    <span className="text-amber-900 mr-[8px] text-[18px]">
                       <HiCalendarDateRange />
                     </span>
-                    {v.date} 
+                    {v.date}
                   </li>
                   <span className="px-[15px]">|</span>
                   <li className="flex items-center font-light">
@@ -90,18 +90,21 @@ const Blog_Post = () => {
                     {v.comments} comments
                   </li>
                 </ul>
-                <p className="mb-[20px] text-[16px] lg:w-[85%]">{v.description}</p>
-                <Border_Btn title={"Read More"} className={"!text-black"}/>
+                <p className="mb-[20px] text-[16px] lg:w-[85%]">
+                  {v.description}
+                </p>
+                <Border_Btn title={"Read More"} className={"!text-black !mt-0" } />
               </div>
             </div>
           ))}
         </div>
 
+      </div>
         {/* Controls */}
-        <div className=" absolute top-1/2 sm:top-[52%] w-full  sm:-left-0 -left-4 flex justify-between text-[20px] gap-5 mt-5">
+        <div className=" absolute md:top-[65%] top-[58%] w-[90%] md:w-full items-center md:px-[20px]  sm:-left-0 flex justify-between text-[20px] gap-5 mt-5">
           <button
             onClick={prevSlide}
-            className=" border-amber-900 w-[40px] h-[40px] border-2 transition-all duration-500 bg hover:border-yel-color hover:bg-yel-color rounded-full cursor-pointer"
+            className=" border-amber-900 sm:translate-x-1 md:translate-0 -translate-x-3 w-[40px] h-[40px] border-2 transition-all duration-500 bg hover:border-yel-color hover:bg-yel-color rounded-full cursor-pointer"
           >
             {"<"}
           </button>
@@ -112,7 +115,6 @@ const Blog_Post = () => {
             {">"}
           </button>
         </div>
-      </div>
     </section>
   );
 };

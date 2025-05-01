@@ -15,13 +15,13 @@ const Home = () => {
       <Hero />
       <Products />
       <Banner banner1={true} />/
-      <div className="flex flex-col items-center">
+      {/* <div className="flex flex-col items-center">
         <Offers row={"row"} />
         <Offers row={"row-reverse"} />
-      </div>
+      </div> */}
       <Banner />
       <Team />
-      <Image_Gallery />
+      {/* <Image_Gallery /> */}
       <Blog_Post />
       <Premium_Products />
       <Services />

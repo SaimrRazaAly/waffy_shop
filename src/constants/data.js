@@ -116,26 +116,27 @@ export const Premium_Products_data = [
 // imports
 
 import { IoIosTimer } from "react-icons/io";
-import { GrPowerCycle } from "react-icons/gr";
-import { FaShoppingBag } from "react-icons/fa";
+import { GrCycle } from "react-icons/gr";
+import { BiSolidShoppingBag } from "react-icons/bi";
+// All should use `icon`
 export const Services_data = [
   {
     id: 1,
-    title: "Money Back Garuntee",
+    title: "Money Back Guarantee",
     description:
       "Korem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
-    image: <FaShoppingBag />,
+    icon: <BiSolidShoppingBag />,
   },
   {
     id: 2,
-    title: "Free shipping",
+    title: "Free Shipping",
     description:
-      "Sit amet dolor consecteur adipisicing elitsed do eiusmod tempor incididunt ulabore et dolore ulabore et dolore.",
-    image: <GrPowerCycle />,
+      "Sit amet dolor consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore.",
+    icon: <GrCycle />,
   },
   {
     id: 3,
-    title: "23/7 Costumer",
+    title: "24/7 Customer Support",
     description:
       "Korem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
     icon: <IoIosTimer />,
@@ -798,6 +799,6 @@ export const footerData = [
       "9.30AM - 7.30PM",
       "mail@example.com",
     ],
-    isIconSection: true,
+    isIconSection: false,
   },
 ];
