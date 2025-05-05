@@ -8,9 +8,6 @@ import Image from "next/image";
 import { FaUser } from "react-icons/fa";
 import { HiCalendarDateRange } from "react-icons/hi2";
 import { LiaCommentsSolid } from "react-icons/lia";
-
-import { GrLinkNext } from "react-icons/gr";
-import { GrLinkPrevious } from "react-icons/gr";
 import Link from "next/link";
 
 const Blog_Post = () => {
@@ -48,7 +45,7 @@ const Blog_Post = () => {
           {Blog_Post_data.map((v) => (
             <div
               key={v.id}
-              className="w-full relative  flex flex-col lg:px-[40px]  tlg:flex-row items-center justify-center overflow-hidden "
+              className="w-full relative flex flex-col lg:px-[40px]  tlg:flex-row items-center justify-center overflow-hidden "
               style={{ width: `${100 / Blog_Post_data.length}%` }}
             >
               {/* Image */}
@@ -93,28 +90,39 @@ const Blog_Post = () => {
                 <p className="mb-[20px] text-[16px] lg:w-[85%]">
                   {v.description}
                 </p>
-                <Border_Btn title={"Read More"} className={"!text-black !mt-0" } />
+                <Border_Btn
+                  title={"Read More"}
+                  className={"!text-black !mt-0"}
+                />
+              </div>
+              <div className=" absolute inset-0  md:w-full items-center   sm:-left-0 flex justify-between text-[20px] mt-5">
+                <button
+                  onClick={v.id === 2 ? prevSlide : null}
+                  className={` border-amber-900  w-[40px] h-[40px] border-2 transition-all duration-500 bg hover:border-yel-color hover:bg-yel-color rounded-full cursor-pointer ${
+                    v.id === 1
+                      ? "hover:cursor-not-allowed hover:!bg-gray-400 hover:border-transparent hover:opacity-35"
+                      : ""
+                  }`}
+                >
+                  {"<"}
+                </button>
+
+                <button
+                  onClick={v.id === 1 ? nextSlide : null}
+                  className={` border-amber-900 w-[40px] h-[40px] border-2 transition-all duration-500 bg hover:border-yel-color hover:bg-yel-color rounded-full cursor-pointer ${
+                    v.id === 2
+                      ? "hover:cursor-not-allowed hover:!bg-gray-400 hover:border-transparent hover:opacity-35"
+                      : ""
+                  }`}
+                >
+                  {">"}
+                </button>
               </div>
             </div>
           ))}
         </div>
-
       </div>
-        {/* Controls */}
-        <div className=" absolute md:top-[65%] top-[58%] w-[90%] md:w-full items-center md:px-[20px]  sm:-left-0 flex justify-between text-[20px] gap-5 mt-5">
-          <button
-            onClick={prevSlide}
-            className=" border-amber-900 sm:translate-x-1 md:translate-0 -translate-x-3 w-[40px] h-[40px] border-2 transition-all duration-500 bg hover:border-yel-color hover:bg-yel-color rounded-full cursor-pointer"
-          >
-            {"<"}
-          </button>
-          <button
-            onClick={nextSlide}
-            className=" border-amber-900 w-[40px] h-[40px] border-2 transition-all duration-500 bg hover:border-yel-color hover:bg-yel-color rounded-full cursor-pointer"
-          >
-            {">"}
-          </button>
-        </div>
+      {/* Controls */}
     </section>
   );
 };

@@ -17,13 +17,13 @@ const Team_Card = ({ name, profession, image }) => {
           />
         </div>
       </div>
-      <div className="h-[40%] flex flex-col items-center justify-center text-center mt-4 bg-white  ">
+      <div className="h-[40%] flex flex-col items-center justify-center text-center mt-4 ">
         <h2 className="text-[23.8px]  font-bold font-serif text-amber-900 mb-[10px] ">
           {name}
         </h2>
         <p className="font-extralight  my-[10px] ">{profession}</p>
 
-        <ul className="flex gap-3.5 text-[16px] mb-[30px] mt-[10px] px-[15px]">
+        <ul className="flex gap-3.5 text-[16px] mb-[30px] mt-[10px] px-[15px] ">
           {Team_icons_data.map((item) => (
             <li key={item.id} className="m-[5px] opacity-90">
               <a

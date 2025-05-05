@@ -4,7 +4,6 @@ import Page_Hero_Banner from "@/Components/Page_Hero_Banner";
 import { blogData } from "@/constants/data";
 import Image from "next/image";
 import { LiaCommentsSolid } from "react-icons/lia";
-
 import { FaUser } from "react-icons/fa";
 import { HiCalendarDateRange } from "react-icons/hi2";
 

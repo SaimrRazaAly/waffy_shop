@@ -29,7 +29,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${spicyRice.className} overflow-x-hidden`}>
+      <body className={`${spicyRice.className} overflow-x-hidden `}>
         <StoreContextProvider>
           <Navbar />
           {children}

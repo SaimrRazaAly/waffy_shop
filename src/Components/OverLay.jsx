@@ -33,7 +33,7 @@ import Border_Btn from "./Border_Btn";
 const OverLay = ({ title, para, row, classes }) => {
   return (
     <div
-      className={`absolute bottom-[25px] right-[25px] md:w-auto w-[45%]  bg-[#000000c2] p-[30px] bg-opacity-30 ${classes}   ${
+      className={`absolute h-auto bottom-[25px] right-[25px] w-auto bg-[#000000c2] p-[30px] bg-opacity-30 ${classes}   ${
         row === "row-reverse"
           ? "text-black bg-[#fbfbfb]  "
           : "text-white bg-[#000000c2]  "
@@ -42,12 +42,16 @@ const OverLay = ({ title, para, row, classes }) => {
       <h1
         className={`${
           row === "row-reverse" ? "text-amber-900" : "text-yellow-500"
-        } text-2xl  mb-[15px] ${para ? "lg:text-[40px]" : ""}`}
+        } text-2xl mb-[15px]  ${para ? "lg:text-[40px] " : ""}`}
       >
         {title}
       </h1>
       {para && <p className="capitalize md:text-[24px]   mb-[15px]">{para}</p>}
-      <Border_Btn title={"Shop Now"} black={false} className={"!mt-0 !mb-0"} />
+      <Border_Btn
+      black={false}
+        title={"Shop Now"}
+        className={`!mt-0 !mb-0  `}
+      />
     </div>
   );
 };

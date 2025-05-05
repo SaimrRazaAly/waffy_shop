@@ -2,7 +2,7 @@
 import Loading from "@/app/loading";
 import Page_Hero_Banner from "@/Components/Page_Hero_Banner";
 import Sec_Heading from "@/Components/Sec_Heading";
-import React from "react";
+import React, { Suspense } from "react";
 
 import { IoIosTimer } from "react-icons/io";
 const arr = [1, 2, 3];
@@ -40,6 +40,7 @@ const Contact = () => {
         </div>
         <div className="min-h-screen my-4 flex flex-col md:flex-row items-stretch justify-between bg-white p-4 md:p-10 gap-6">
           {/* Map Section */}
+       
           <div className="w-full md:w-1/2 bg-gray-200 rounded-lg overflow-hidden">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.1602802684192!2d77.39638073968018!3d28.504825075835775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce626851f7009%3A0x621185133cfd1ad1!2sGeeksforGeeks%20%7C%20Coding%20Classes!5e0!3m2!1sen!2sin!4v1702963476861!5m2!1sen!2sin"
@@ -49,7 +50,6 @@ const Contact = () => {
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
-
           {/* Form Section */}
           <div className="w-full md:w-1/2 space-y-4 my-6">
             <h2 className="text-3xl font-bold mb-4">Contact Us</h2>

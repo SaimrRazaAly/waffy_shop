@@ -96,13 +96,13 @@ const Navbar = () => {
                 <Link
                   href={item.link}
                   onClick={() => setClick(false)}
-                  className="text-2xl lg:text-[16px] hover:text-amber-500 transition p-[15px]"
+                  className="text-2xl lg:text-[16px] hover:text-amber-500  transition p-[15px]"
                 >
                   {item.children ? item.title + " ↓" : item.title}
                 </Link>
-{/* 
+
                 {item.children && (
-                <ul className={`absolute overflow-hidden ${item.children.length === 3 ?  "flex gap-4 w-[760px]": "w-44"} opacity-0 group-hover:opacity-100 focus:block bg-white mt-3 transition-all duration-500 scale-105 z-10 `}>
+                <ul className={`absolute overflow-hidden ${item.children.length === 3 ?  "flex gap-4 w-[760px]": "w-44"} group-hover:h-auto h-0 opacity-0 group-hover:opacity-100 focus:block bg-white mt-3 transition-all duration-500 scale-105 z-10 `}>
                   {item.children.map((child, i) =>
                     child.price ? (
                       <li
@@ -135,7 +135,7 @@ const Navbar = () => {
                     )
                   )}
                 </ul>
-              )} */}
+              )} 
               </li>
             ))}
           </nav>

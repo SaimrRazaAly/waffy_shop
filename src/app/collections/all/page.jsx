@@ -1,6 +1,7 @@
 import Border_Btn from "@/Components/Border_Btn";
 import Product_Card from "@/Components/Cards";
 import Page_Hero_Banner from "@/Components/Page_Hero_Banner";
+import Product_Card_Shop from "@/Components/Product_Card";
 import { food_list } from "@/constants/data";
 import Image from "next/image";
 import Link from "next/link";
@@ -15,26 +16,7 @@ const Shop_Page = () => {
         <div className="mx-auto md:gap-5 gap-3 flex items-center justify-center flex-wrap px-5 py-20">
           {food_list.map((v, i) => {
             return (
-              <div
-                key={v._id}
-                className="flex border-2 border-amber-200 w-full flex-col items-center justify-center md:h-[430px] md:w-[250px] cursor-pointer px-6 py-2 shadow-lg bg-white rounded-md"
-              >
-                <div className="relative md:w-[200px] w-[100%] h-[200px] aspect-[3/4]">
-                  <Image
-                    src={v.image}
-                    alt="Dires"
-                    fill
-                    className="object-cover object-center md:rounded-full"
-                  />
-                </div>
-                <h2 className="main_text text-xl mt-3 font-semibold mb-5">
-                  {v.name}
-                </h2>
-                <p className="mb-3">${v.price}</p>
-                <Link href={`/products/${v.name.replace(/\s+/g, "-")}`}>
-                  <Border_Btn title={"Shop Now"} />
-                </Link>
-              </div>
+           <Product_Card_Shop key={i} image={v.image} price={v.price} title={v.name} show_Btn={true}/>
             );
           })}
         </div>

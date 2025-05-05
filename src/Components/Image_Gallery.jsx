@@ -8,45 +8,14 @@ import Link from "next/link";
 
 const Image_Gallery = () => {
   return (
-    <div className="flex flex-col xl:flex-row gap-3 mt-14">
-      {/* Left Section */}
-      <div className="flex flex-col gap-1 xl:gap-5 xl:flex-row xl:w-[65%]">
-        {/* Big Image */}
-        <HoverCard extraClass="w-full h-[400px] xl:h-[600px] xl:w-[70%]" />
-
-        {/* Small Images */}
-        {/* <div className="md:flex gap-5 md:items-center md:justify-center h-[400px]">
-          <div className="flex flex-col md:flex-col  md:gap-3 xl:gap-1 gap-1">
-            <HoverCard extraClass="md:w-[200px] md:h-[300px] w-full h-[400px]" />
-            <HoverCard extraClass="md:w-[200px] md:h-[300px] w-full h-[400px]" />
-          </div> */}
-
-          {/* <div className="md:flex items-center justify-center xl:flex-col gap-1 xl:hidden hidden md:gap-3 xl:gap-1">
-            <HoverCard extraClass="md:w-[190px] md:h-[300px] w-full h-[400px]" />
-            <HoverCard extraClass="md:w-[170px] md:h-[300px] w-full h-[400px]" />
-          // </div>*/}
-        {/* </div>  */}
-      </div>
-
-<div className="flex">
-
-      <div className=" flex-col gap-1 flex">
-          <HoverCard extraClass="md:w-[350px] md:h-[300px] w-full h-[400px]" />
-          <HoverCard extraClass="md:w-[350px] md:h-[300px] w-full h-[400px]" />
-        </div>
-      {/* Right Section */}
-      <div className="md:flex gap-4">
-
-        <HoverCard extraClass="w-full md:h-[600px] h-[400px] xl:h-[600px] xl:w-[50%] md:w-[30%]" />
-
-        <div className="flex flex-col gap-1">
-          <HoverCard extraClass="md:w-[250px] md:h-[300px] w-full h-[400px]" />
-          <HoverCard extraClass="md:w-[250px] md:h-[300px] w-full h-[400px]" />
-        </div>
-      </div>
-</div>
-   
-      </div>
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 tlg:grid-cols-6 ">
+      <div className="bg-red-300  p-4 lg:col-span-3 tlg:col-span-2 tlg:row-span-3" />
+      <div className="bg-red-300 p-4   " />
+      <div className="bg-red-300  p-4 lg:row-span-3 tlg:col-span-2 " />
+      <div className="bg-red-300  p-4 " />
+      <div className="bg-red-300  p-4" />
+      <div className="bg-red-300  p-4" />
+    </div>
   );
 };
 
@@ -55,7 +24,9 @@ export default Image_Gallery;
 // ========== HoverCard component ==========
 const HoverCard = ({ extraClass }) => {
   return (
-    <div className={`relative group overflow-hidden  ${extraClass}`}>
+    <div
+      className={`relative group overflow-hidden w-full h-[300px]  ${extraClass}`}
+    >
       <Image
         src={"/images/2.jpg"}
         alt="This"
@@ -77,7 +48,7 @@ const HoverCard = ({ extraClass }) => {
             Subtitle or small description
           </p>
           <Link href={"/collections/all"}>
-          <Border_Btn title="Learn More" />
+            <Border_Btn title="Learn More" />
           </Link>
         </div>
       </div>

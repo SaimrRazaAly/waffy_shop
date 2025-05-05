@@ -46,7 +46,7 @@ export default function Carousel() {
           {slides.map((slide, index) => (
             <div
               key={index}
-              className="min-w-full h-[130vh]  overflow-x-hidden px-[60px] relative"
+              className="min-w-full h-[130vh]  overflow-x-hidden  relative"
             >
               <img
                 src={slide.image}

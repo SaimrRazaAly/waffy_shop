@@ -2,6 +2,7 @@ import Plus from "@/app/products/[product_name]/Plus";
 import Border_Btn from "@/Components/Border_Btn";
 import Product_Card from "@/Components/Cards";
 import Page_Hero_Banner from "@/Components/Page_Hero_Banner";
+import Product_Card_Shop from "@/Components/Product_Card";
 import { food_list } from "@/constants/data";
 import Image from "next/image";
 import Link from "next/link";
@@ -19,35 +20,7 @@ const Roaster_seeds = () => {
           {food_list.map((v, i) => {
             if (v.category === "Deserts" || v.category === "Pure Veg"  || v.category === "Pasta")
               return (
-                <div
-                  key={v._id}
-                  className="flex  border-2 border-amber-200 w-full flex-col items-center justify-center  md:w-[250px] cursor-pointer px-6 py-2 shadow-lg bg-white rounded-md"
-                >
-                  <div className="relative md:w-[200px] w-[100%] h-[200px] aspect-[3/4]">
-                    <Image
-                      src={v.image}
-                      alt="Dires"
-                      fill
-                      className="object-cover object-center md:rounded-full"
-                    />
-                  </div>
-                  <Link href={`/products/${v.name.replace(/\s+/g, "-")}`}>
-                    <h2 className="main_text text-xl mt-3 font-semibold mb-5">
-                      {v.name}
-                    </h2>
-                    <p className="mb-3 text-center text-[18px] font-bold">
-                      ${v.price}
-                    </p>
-                  </Link>
-                  <div className="  flex items-center gap-4 mb-5  transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-                    <Plus id={v._id} notitle={false} />
-                    <Link href={"/cart"}>
-                      <span className="p-4 bg-mber-900 cursor-pointer text-gray-900">
-                        <FaCartShopping />
-                      </span>
-                    </Link>
-                  </div>
-                </div>
+               <Product_Card_Shop image={v.image} price={v.price} key={v._id} title={v.name}/>
               );
           })}
         </div>
@@ -57,3 +30,11 @@ const Roaster_seeds = () => {
 };
 
 export default Roaster_seeds;
+                  // <div className="  flex items-center gap-4 mb-5  transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                  //   <Plus id={v._id} notitle={false} />
+                  //   <Link href={"/cart"}>
+                  //     <span className="p-4 bg-mber-900 cursor-pointer text-gray-900">
+                  //       <FaCartShopping />
+                  //     </span>
+                  //   </Link>
+                  // </div>
